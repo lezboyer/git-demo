@@ -1,0 +1,1247 @@
+* 
+* ==> Audit <==
+* |---------|--------------------------------|----------|------------|---------|---------------------|---------------------|
+| Command |              Args              | Profile  |    User    | Version |     Start Time      |      End Time       |
+|---------|--------------------------------|----------|------------|---------|---------------------|---------------------|
+| start   | --driver=docker                | minikube | boye028451 | v1.26.1 | 11 Aug 22 22:09 GMT |                     |
+|         | --alsologtostderr              |          |            |         |                     |                     |
+| start   | --driver=docker                | minikube | boye028451 | v1.26.1 | 11 Aug 22 22:12 GMT | 11 Aug 22 22:17 GMT |
+| addons  | list                           | minikube | boye028451 | v1.26.1 | 11 Aug 22 22:21 GMT | 11 Aug 22 22:21 GMT |
+| stop    |                                | minikube | boye028451 | v1.26.1 | 11 Aug 22 23:14 GMT | 11 Aug 22 23:14 GMT |
+| delete  |                                | minikube | boye028451 | v1.26.1 | 11 Aug 22 23:14 GMT | 11 Aug 22 23:14 GMT |
+| start   | --driver=docker                | minikube | boye028451 | v1.26.1 | 11 Aug 22 23:17 GMT | 11 Aug 22 23:18 GMT |
+| service | mongo-express-service          | minikube | boye028451 | v1.26.1 | 13 Aug 22 21:31 GMT |                     |
+| service | mongo-express-service          | minikube | boye028451 | v1.26.1 | 13 Aug 22 21:45 GMT |                     |
+| addons  | ingress                        | minikube | boye028451 | v1.26.1 | 15 Aug 22 06:58 GMT | 15 Aug 22 06:58 GMT |
+| addons  | ingress                        | minikube | boye028451 | v1.26.1 | 15 Aug 22 07:13 GMT | 15 Aug 22 07:13 GMT |
+| addons  | enable ingress                 | minikube | boye028451 | v1.26.1 | 15 Aug 22 07:13 GMT |                     |
+|---------|--------------------------------|----------|------------|---------|---------------------|---------------------|
+
+* 
+* ==> Dernier démarrage <==
+* Log file created at: 2022/08/11 23:17:08
+Running on machine: mac028451
+Binary: Built with gc go1.18.5 for darwin/arm64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0811 23:17:08.602232   80322 out.go:296] Setting OutFile to fd 1 ...
+I0811 23:17:08.602328   80322 out.go:348] isatty.IsTerminal(1) = true
+I0811 23:17:08.602330   80322 out.go:309] Setting ErrFile to fd 2...
+I0811 23:17:08.602333   80322 out.go:348] isatty.IsTerminal(2) = true
+I0811 23:17:08.602426   80322 root.go:333] Updating PATH: /Users/boye028451/.minikube/bin
+I0811 23:17:08.603056   80322 out.go:303] Setting JSON to false
+I0811 23:17:08.624633   80322 start.go:115] hostinfo: {"hostname":"mac028451.orange-sonatel.com","uptime":895606,"bootTime":1659364222,"procs":503,"os":"darwin","platform":"darwin","platformFamily":"Standalone Workstation","platformVersion":"12.5","kernelVersion":"21.6.0","kernelArch":"arm64","virtualizationSystem":"","virtualizationRole":"","hostId":"1819ee56-a2ba-5209-84d6-137f8bc78be4"}
+W0811 23:17:08.624715   80322 start.go:123] gopshost.Virtualization returned error: not implemented yet
+I0811 23:17:08.646964   80322 out.go:177] 😄  minikube v1.26.1 sur Darwin 12.5 (arm64)
+I0811 23:17:08.666439   80322 notify.go:193] Checking for updates...
+I0811 23:17:08.667421   80322 driver.go:365] Setting default libvirt URI to qemu:///system
+I0811 23:17:08.863065   80322 docker.go:137] docker version: linux-20.10.17
+I0811 23:17:08.863309   80322 cli_runner.go:164] Run: docker system info --format "{{json .}}"
+I0811 23:17:09.340917   80322 info.go:265] docker info: {ID:3ESQ:CVBS:IQJT:2IIO:3CIR:FT35:QMPD:3HJX:5QGL:TSMX:YTHO:KL2I Containers:0 ContainersRunning:0 ContainersPaused:0 ContainersStopped:0 Images:8 Driver:overlay2 DriverStatus:[[Backing Filesystem extfs] [Supports d_type true] [Native Overlay Diff true] [userxattr false]] SystemStatus:<nil> Plugins:{Volume:[local] Network:[bridge host ipvlan macvlan null overlay] Authorization:<nil> Log:[awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog]} MemoryLimit:true SwapLimit:true KernelMemory:false KernelMemoryTCP:false CPUCfsPeriod:true CPUCfsQuota:true CPUShares:true CPUSet:true PidsLimit:true IPv4Forwarding:true BridgeNfIptables:true BridgeNfIP6Tables:true Debug:false NFd:46 OomKillDisable:false NGoroutines:49 SystemTime:2022-08-11 23:17:08.919326262 +0000 UTC LoggingDriver:json-file CgroupDriver:cgroupfs NEventsListener:4 KernelVersion:5.10.104-linuxkit OperatingSystem:Docker Desktop OSType:linux Architecture:aarch64 IndexServerAddress:https://index.docker.io/v1/ RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[127.0.0.0/8] IndexConfigs:{DockerIo:{Name:docker.io Mirrors:[] Secure:true Official:true}} Mirrors:[]} NCPU:5 MemTotal:8232747008 GenericResources:<nil> DockerRootDir:/var/lib/docker HTTPProxy:http.docker.internal:3128 HTTPSProxy:http.docker.internal:3128 NoProxy:hubproxy.docker.internal Name:docker-desktop Labels:[] ExperimentalBuild:false ServerVersion:20.10.17 ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:runc}} DefaultRuntime:runc Swarm:{NodeID: NodeAddr: LocalNodeState:inactive ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary:docker-init ContainerdCommit:{ID:10c12954828e7c7c9b6e0ea9b0c02b01407d3ae1 Expected:10c12954828e7c7c9b6e0ea9b0c02b01407d3ae1} RuncCommit:{ID:v1.1.2-0-ga916309 Expected:v1.1.2-0-ga916309} InitCommit:{ID:de40ad0 Expected:de40ad0} SecurityOptions:[name=seccomp,profile=default name=cgroupns] ProductLicense: Warnings:<nil> ServerErrors:[] ClientInfo:{Debug:false Plugins:[map[Name:buildx Path:/usr/local/lib/docker/cli-plugins/docker-buildx SchemaVersion:0.1.0 ShortDescription:Docker Buildx Vendor:Docker Inc. Version:v0.8.2] map[Name:compose Path:/usr/local/lib/docker/cli-plugins/docker-compose SchemaVersion:0.1.0 ShortDescription:Docker Compose Vendor:Docker Inc. Version:v2.7.0] map[Name:extension Path:/usr/local/lib/docker/cli-plugins/docker-extension SchemaVersion:0.1.0 ShortDescription:Manages Docker extensions Vendor:Docker Inc. Version:v0.2.8] map[Name:sbom Path:/usr/local/lib/docker/cli-plugins/docker-sbom SchemaVersion:0.1.0 ShortDescription:View the packaged-based Software Bill Of Materials (SBOM) for an image URL:https://github.com/docker/sbom-cli-plugin Vendor:Anchore Inc. Version:0.6.0] map[Name:scan Path:/usr/local/lib/docker/cli-plugins/docker-scan SchemaVersion:0.1.0 ShortDescription:Docker Scan Vendor:Docker Inc. Version:v0.17.0]] Warnings:<nil>}}
+I0811 23:17:09.379864   80322 out.go:177] ✨  Utilisation du pilote docker basé sur la configuration de l'utilisateur
+I0811 23:17:09.398061   80322 start.go:284] selected driver: docker
+I0811 23:17:09.398077   80322 start.go:808] validating driver "docker" against <nil>
+I0811 23:17:09.398247   80322 start.go:819] status for docker: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:}
+I0811 23:17:09.398507   80322 cli_runner.go:164] Run: docker system info --format "{{json .}}"
+I0811 23:17:09.555538   80322 info.go:265] docker info: {ID:3ESQ:CVBS:IQJT:2IIO:3CIR:FT35:QMPD:3HJX:5QGL:TSMX:YTHO:KL2I Containers:0 ContainersRunning:0 ContainersPaused:0 ContainersStopped:0 Images:8 Driver:overlay2 DriverStatus:[[Backing Filesystem extfs] [Supports d_type true] [Native Overlay Diff true] [userxattr false]] SystemStatus:<nil> Plugins:{Volume:[local] Network:[bridge host ipvlan macvlan null overlay] Authorization:<nil> Log:[awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog]} MemoryLimit:true SwapLimit:true KernelMemory:false KernelMemoryTCP:false CPUCfsPeriod:true CPUCfsQuota:true CPUShares:true CPUSet:true PidsLimit:true IPv4Forwarding:true BridgeNfIptables:true BridgeNfIP6Tables:true Debug:false NFd:46 OomKillDisable:false NGoroutines:49 SystemTime:2022-08-11 23:17:09.463773262 +0000 UTC LoggingDriver:json-file CgroupDriver:cgroupfs NEventsListener:4 KernelVersion:5.10.104-linuxkit OperatingSystem:Docker Desktop OSType:linux Architecture:aarch64 IndexServerAddress:https://index.docker.io/v1/ RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[127.0.0.0/8] IndexConfigs:{DockerIo:{Name:docker.io Mirrors:[] Secure:true Official:true}} Mirrors:[]} NCPU:5 MemTotal:8232747008 GenericResources:<nil> DockerRootDir:/var/lib/docker HTTPProxy:http.docker.internal:3128 HTTPSProxy:http.docker.internal:3128 NoProxy:hubproxy.docker.internal Name:docker-desktop Labels:[] ExperimentalBuild:false ServerVersion:20.10.17 ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:runc}} DefaultRuntime:runc Swarm:{NodeID: NodeAddr: LocalNodeState:inactive ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary:docker-init ContainerdCommit:{ID:10c12954828e7c7c9b6e0ea9b0c02b01407d3ae1 Expected:10c12954828e7c7c9b6e0ea9b0c02b01407d3ae1} RuncCommit:{ID:v1.1.2-0-ga916309 Expected:v1.1.2-0-ga916309} InitCommit:{ID:de40ad0 Expected:de40ad0} SecurityOptions:[name=seccomp,profile=default name=cgroupns] ProductLicense: Warnings:<nil> ServerErrors:[] ClientInfo:{Debug:false Plugins:[map[Name:buildx Path:/usr/local/lib/docker/cli-plugins/docker-buildx SchemaVersion:0.1.0 ShortDescription:Docker Buildx Vendor:Docker Inc. Version:v0.8.2] map[Name:compose Path:/usr/local/lib/docker/cli-plugins/docker-compose SchemaVersion:0.1.0 ShortDescription:Docker Compose Vendor:Docker Inc. Version:v2.7.0] map[Name:extension Path:/usr/local/lib/docker/cli-plugins/docker-extension SchemaVersion:0.1.0 ShortDescription:Manages Docker extensions Vendor:Docker Inc. Version:v0.2.8] map[Name:sbom Path:/usr/local/lib/docker/cli-plugins/docker-sbom SchemaVersion:0.1.0 ShortDescription:View the packaged-based Software Bill Of Materials (SBOM) for an image URL:https://github.com/docker/sbom-cli-plugin Vendor:Anchore Inc. Version:0.6.0] map[Name:scan Path:/usr/local/lib/docker/cli-plugins/docker-scan SchemaVersion:0.1.0 ShortDescription:Docker Scan Vendor:Docker Inc. Version:v0.17.0]] Warnings:<nil>}}
+I0811 23:17:09.555660   80322 start_flags.go:296] no existing cluster config was found, will generate one from the flags 
+I0811 23:17:09.555987   80322 start_flags.go:377] Using suggested 4000MB memory alloc based on sys=16384MB, container=7851MB
+I0811 23:17:09.556057   80322 start_flags.go:835] Wait components to verify : map[apiserver:true system_pods:true]
+I0811 23:17:09.574952   80322 out.go:177] 📌  Utilisation du pilote Docker Desktop avec le privilège root
+I0811 23:17:09.594158   80322 cni.go:95] Creating CNI manager for ""
+I0811 23:17:09.594319   80322 cni.go:169] CNI unnecessary in this configuration, recommending no CNI
+I0811 23:17:09.594329   80322 start_flags.go:310] config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8 Memory:4000 CPUs:2 DiskSize:20000 VMDriver: Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.24.3 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/Users:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath:}
+I0811 23:17:09.612862   80322 out.go:177] 👍  Démarrage du noeud de plan de contrôle minikube dans le cluster minikube
+I0811 23:17:09.649861   80322 cache.go:120] Beginning downloading kic base image for docker with docker
+I0811 23:17:09.668851   80322 out.go:177] 🚜  Extraction de l'image de base...
+I0811 23:17:09.705988   80322 preload.go:132] Checking if preload exists for k8s version v1.24.3 and runtime docker
+I0811 23:17:09.706114   80322 preload.go:148] Found local preload: /Users/boye028451/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.24.3-docker-overlay2-arm64.tar.lz4
+I0811 23:17:09.706137   80322 cache.go:57] Caching tarball of preloaded images
+I0811 23:17:09.706555   80322 image.go:75] Checking for gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8 in local docker daemon
+I0811 23:17:09.706652   80322 preload.go:174] Found /Users/boye028451/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.24.3-docker-overlay2-arm64.tar.lz4 in cache, skipping download
+I0811 23:17:09.706672   80322 cache.go:60] Finished verifying existence of preloaded tar for  v1.24.3 on docker
+I0811 23:17:09.708654   80322 profile.go:148] Saving config to /Users/boye028451/.minikube/profiles/minikube/config.json ...
+I0811 23:17:09.708741   80322 lock.go:35] WriteFile acquiring /Users/boye028451/.minikube/profiles/minikube/config.json: {Name:mkcdee8d274ac4bb63534868b5969fbdb10cfb22 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0811 23:17:09.773308   80322 cache.go:147] Downloading gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8 to local cache
+I0811 23:17:09.773683   80322 image.go:59] Checking for gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8 in local cache directory
+I0811 23:17:09.773704   80322 image.go:62] Found gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8 in local cache directory, skipping pull
+I0811 23:17:09.773707   80322 image.go:103] gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8 exists in cache, skipping pull
+I0811 23:17:09.773711   80322 cache.go:150] successfully saved gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8 as a tarball
+I0811 23:17:09.773713   80322 cache.go:161] Loading gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8 from local cache
+I0811 23:17:16.442866   80322 cache.go:164] successfully loaded gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8 from cached tarball
+I0811 23:17:16.442886   80322 cache.go:170] Downloading gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8 to local daemon
+I0811 23:17:16.443101   80322 image.go:75] Checking for gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8 in local docker daemon
+I0811 23:17:16.514588   80322 image.go:243] Writing gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8 to local daemon
+I0811 23:18:06.053379   80322 cache.go:173] successfully downloaded gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8
+I0811 23:18:06.053504   80322 cache.go:208] Successfully downloaded all kic artifacts
+I0811 23:18:06.053629   80322 start.go:371] acquiring machines lock for minikube: {Name:mk904b728a7d09e68e7804e2240b570c93f8fe9a Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0811 23:18:06.054025   80322 start.go:375] acquired machines lock for "minikube" in 366.041µs
+I0811 23:18:06.054109   80322 start.go:92] Provisioning new machine with config: &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8 Memory:4000 CPUs:2 DiskSize:20000 VMDriver: Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.24.3 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.24.3 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/Users:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath:} &{Name: IP: Port:8443 KubernetesVersion:v1.24.3 ContainerRuntime:docker ControlPlane:true Worker:true}
+I0811 23:18:06.054329   80322 start.go:132] createHost starting for "" (driver="docker")
+I0811 23:18:06.098920   80322 out.go:204] 🔥  Création de docker container (CPUs=2, Memory=4000Mo) ...
+I0811 23:18:06.099848   80322 start.go:166] libmachine.API.Create for "minikube" (driver="docker")
+I0811 23:18:06.099877   80322 client.go:168] LocalClient.Create starting
+I0811 23:18:06.100282   80322 main.go:134] libmachine: Reading certificate data from /Users/boye028451/.minikube/certs/ca.pem
+I0811 23:18:06.100534   80322 main.go:134] libmachine: Decoding PEM data...
+I0811 23:18:06.100554   80322 main.go:134] libmachine: Parsing certificate...
+I0811 23:18:06.101030   80322 main.go:134] libmachine: Reading certificate data from /Users/boye028451/.minikube/certs/cert.pem
+I0811 23:18:06.101183   80322 main.go:134] libmachine: Decoding PEM data...
+I0811 23:18:06.101195   80322 main.go:134] libmachine: Parsing certificate...
+I0811 23:18:06.102123   80322 cli_runner.go:164] Run: docker network inspect minikube --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+W0811 23:18:06.173469   80322 cli_runner.go:211] docker network inspect minikube --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}" returned with exit code 1
+I0811 23:18:06.173588   80322 network_create.go:272] running [docker network inspect minikube] to gather additional debugging logs...
+I0811 23:18:06.173609   80322 cli_runner.go:164] Run: docker network inspect minikube
+W0811 23:18:06.231692   80322 cli_runner.go:211] docker network inspect minikube returned with exit code 1
+I0811 23:18:06.231716   80322 network_create.go:275] error running [docker network inspect minikube]: docker network inspect minikube: exit status 1
+stdout:
+[]
+
+stderr:
+Error: No such network: minikube
+I0811 23:18:06.231728   80322 network_create.go:277] output of [docker network inspect minikube]: -- stdout --
+[]
+
+-- /stdout --
+** stderr ** 
+Error: No such network: minikube
+
+** /stderr **
+I0811 23:18:06.231826   80322 cli_runner.go:164] Run: docker network inspect bridge --format "{"Name": "{{.Name}}","Driver": "{{.Driver}}","Subnet": "{{range .IPAM.Config}}{{.Subnet}}{{end}}","Gateway": "{{range .IPAM.Config}}{{.Gateway}}{{end}}","MTU": {{if (index .Options "com.docker.network.driver.mtu")}}{{(index .Options "com.docker.network.driver.mtu")}}{{else}}0{{end}}, "ContainerIPs": [{{range $k,$v := .Containers }}"{{$v.IPv4Address}}",{{end}}]}"
+I0811 23:18:06.290001   80322 network.go:288] reserving subnet 192.168.49.0 for 1m0s: &{mu:{state:0 sema:0} read:{v:{m:map[] amended:true}} dirty:map[192.168.49.0:0x1400045e0c8] misses:0}
+I0811 23:18:06.290236   80322 network.go:235] using free private subnet 192.168.49.0/24: &{IP:192.168.49.0 Netmask:255.255.255.0 Prefix:24 CIDR:192.168.49.0/24 Gateway:192.168.49.1 ClientMin:192.168.49.2 ClientMax:192.168.49.254 Broadcast:192.168.49.255 Interface:{IfaceName: IfaceIPv4: IfaceMTU:0 IfaceMAC:}}
+I0811 23:18:06.290267   80322 network_create.go:115] attempt to create docker network minikube 192.168.49.0/24 with gateway 192.168.49.1 and MTU of 1500 ...
+I0811 23:18:06.290349   80322 cli_runner.go:164] Run: docker network create --driver=bridge --subnet=192.168.49.0/24 --gateway=192.168.49.1 -o --ip-masq -o --icc -o com.docker.network.driver.mtu=1500 --label=created_by.minikube.sigs.k8s.io=true --label=name.minikube.sigs.k8s.io=minikube minikube
+I0811 23:18:06.377936   80322 network_create.go:99] docker network minikube 192.168.49.0/24 created
+I0811 23:18:06.377975   80322 kic.go:106] calculated static IP "192.168.49.2" for the "minikube" container
+I0811 23:18:06.378059   80322 cli_runner.go:164] Run: docker ps -a --format {{.Names}}
+I0811 23:18:06.436290   80322 cli_runner.go:164] Run: docker volume create minikube --label name.minikube.sigs.k8s.io=minikube --label created_by.minikube.sigs.k8s.io=true
+I0811 23:18:06.495055   80322 oci.go:103] Successfully created a docker volume minikube
+I0811 23:18:06.495176   80322 cli_runner.go:164] Run: docker run --rm --name minikube-preload-sidecar --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=minikube --entrypoint /usr/bin/test -v minikube:/var gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8 -d /var/lib
+I0811 23:18:06.924586   80322 oci.go:107] Successfully prepared a docker volume minikube
+I0811 23:18:06.924659   80322 preload.go:132] Checking if preload exists for k8s version v1.24.3 and runtime docker
+I0811 23:18:06.924677   80322 kic.go:179] Starting extracting preloaded images to volume ...
+I0811 23:18:06.925183   80322 cli_runner.go:164] Run: docker run --rm --entrypoint /usr/bin/tar -v /Users/boye028451/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.24.3-docker-overlay2-arm64.tar.lz4:/preloaded.tar:ro -v minikube:/extractDir gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8 -I lz4 -xf /preloaded.tar -C /extractDir
+I0811 23:18:17.061491   80322 cli_runner.go:217] Completed: docker run --rm --entrypoint /usr/bin/tar -v /Users/boye028451/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.24.3-docker-overlay2-arm64.tar.lz4:/preloaded.tar:ro -v minikube:/extractDir gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8 -I lz4 -xf /preloaded.tar -C /extractDir: (10.136243875s)
+I0811 23:18:17.061519   80322 kic.go:188] duration metric: took 10.136850 seconds to extract preloaded images to volume
+I0811 23:18:17.061681   80322 cli_runner.go:164] Run: docker info --format "'{{json .SecurityOptions}}'"
+I0811 23:18:17.531723   80322 cli_runner.go:164] Run: docker run -d -t --privileged --security-opt seccomp=unconfined --tmpfs /tmp --tmpfs /run -v /lib/modules:/lib/modules:ro --hostname minikube --name minikube --label created_by.minikube.sigs.k8s.io=true --label name.minikube.sigs.k8s.io=minikube --label role.minikube.sigs.k8s.io= --label mode.minikube.sigs.k8s.io=minikube --network minikube --ip 192.168.49.2 --volume minikube:/var --security-opt apparmor=unconfined --memory=4000mb --memory-swap=4000mb --cpus=2 -e container=docker --expose 8443 --publish=8443 --publish=22 --publish=2376 --publish=5000 --publish=32443 gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8
+I0811 23:18:17.907649   80322 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Running}}
+I0811 23:18:17.978959   80322 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+I0811 23:18:18.042188   80322 cli_runner.go:164] Run: docker exec minikube stat /var/lib/dpkg/alternatives/iptables
+I0811 23:18:18.146594   80322 oci.go:144] the created container "minikube" has a running status.
+I0811 23:18:18.146633   80322 kic.go:210] Creating ssh key for kic: /Users/boye028451/.minikube/machines/minikube/id_rsa...
+I0811 23:18:18.294007   80322 kic_runner.go:191] docker (temp): /Users/boye028451/.minikube/machines/minikube/id_rsa.pub --> /home/docker/.ssh/authorized_keys (381 bytes)
+I0811 23:18:18.402991   80322 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+I0811 23:18:18.464283   80322 kic_runner.go:93] Run: chown docker:docker /home/docker/.ssh/authorized_keys
+I0811 23:18:18.464301   80322 kic_runner.go:114] Args: [docker exec --privileged minikube chown docker:docker /home/docker/.ssh/authorized_keys]
+I0811 23:18:18.568929   80322 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+I0811 23:18:18.635340   80322 machine.go:88] provisioning docker machine ...
+I0811 23:18:18.635368   80322 ubuntu.go:169] provisioning hostname "minikube"
+I0811 23:18:18.635467   80322 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0811 23:18:18.695567   80322 main.go:134] libmachine: Using SSH client type: native
+I0811 23:18:18.695776   80322 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x10242c890] 0x10242f3b0 <nil>  [] 0s} 127.0.0.1 55015 <nil> <nil>}
+I0811 23:18:18.695785   80322 main.go:134] libmachine: About to run SSH command:
+sudo hostname minikube && echo "minikube" | sudo tee /etc/hostname
+I0811 23:18:18.820084   80322 main.go:134] libmachine: SSH cmd err, output: <nil>: minikube
+
+I0811 23:18:18.820178   80322 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0811 23:18:18.881602   80322 main.go:134] libmachine: Using SSH client type: native
+I0811 23:18:18.881773   80322 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x10242c890] 0x10242f3b0 <nil>  [] 0s} 127.0.0.1 55015 <nil> <nil>}
+I0811 23:18:18.881781   80322 main.go:134] libmachine: About to run SSH command:
+
+		if ! grep -xq '.*\sminikube' /etc/hosts; then
+			if grep -xq '127.0.1.1\s.*' /etc/hosts; then
+				sudo sed -i 's/^127.0.1.1\s.*/127.0.1.1 minikube/g' /etc/hosts;
+			else 
+				echo '127.0.1.1 minikube' | sudo tee -a /etc/hosts; 
+			fi
+		fi
+I0811 23:18:18.998207   80322 main.go:134] libmachine: SSH cmd err, output: <nil>: 
+I0811 23:18:18.998221   80322 ubuntu.go:175] set auth options {CertDir:/Users/boye028451/.minikube CaCertPath:/Users/boye028451/.minikube/certs/ca.pem CaPrivateKeyPath:/Users/boye028451/.minikube/certs/ca-key.pem CaCertRemotePath:/etc/docker/ca.pem ServerCertPath:/Users/boye028451/.minikube/machines/server.pem ServerKeyPath:/Users/boye028451/.minikube/machines/server-key.pem ClientKeyPath:/Users/boye028451/.minikube/certs/key.pem ServerCertRemotePath:/etc/docker/server.pem ServerKeyRemotePath:/etc/docker/server-key.pem ClientCertPath:/Users/boye028451/.minikube/certs/cert.pem ServerCertSANs:[] StorePath:/Users/boye028451/.minikube}
+I0811 23:18:18.998242   80322 ubuntu.go:177] setting up certificates
+I0811 23:18:18.998247   80322 provision.go:83] configureAuth start
+I0811 23:18:18.998314   80322 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I0811 23:18:19.058094   80322 provision.go:138] copyHostCerts
+I0811 23:18:19.059100   80322 exec_runner.go:144] found /Users/boye028451/.minikube/ca.pem, removing ...
+I0811 23:18:19.059107   80322 exec_runner.go:207] rm: /Users/boye028451/.minikube/ca.pem
+I0811 23:18:19.060050   80322 exec_runner.go:151] cp: /Users/boye028451/.minikube/certs/ca.pem --> /Users/boye028451/.minikube/ca.pem (1090 bytes)
+I0811 23:18:19.060444   80322 exec_runner.go:144] found /Users/boye028451/.minikube/cert.pem, removing ...
+I0811 23:18:19.060448   80322 exec_runner.go:207] rm: /Users/boye028451/.minikube/cert.pem
+I0811 23:18:19.060514   80322 exec_runner.go:151] cp: /Users/boye028451/.minikube/certs/cert.pem --> /Users/boye028451/.minikube/cert.pem (1131 bytes)
+I0811 23:18:19.060779   80322 exec_runner.go:144] found /Users/boye028451/.minikube/key.pem, removing ...
+I0811 23:18:19.060782   80322 exec_runner.go:207] rm: /Users/boye028451/.minikube/key.pem
+I0811 23:18:19.060849   80322 exec_runner.go:151] cp: /Users/boye028451/.minikube/certs/key.pem --> /Users/boye028451/.minikube/key.pem (1679 bytes)
+I0811 23:18:19.061018   80322 provision.go:112] generating server cert: /Users/boye028451/.minikube/machines/server.pem ca-key=/Users/boye028451/.minikube/certs/ca.pem private-key=/Users/boye028451/.minikube/certs/ca-key.pem org=boye028451.minikube san=[192.168.49.2 127.0.0.1 localhost 127.0.0.1 minikube minikube]
+I0811 23:18:19.182784   80322 provision.go:172] copyRemoteCerts
+I0811 23:18:19.183300   80322 ssh_runner.go:195] Run: sudo mkdir -p /etc/docker /etc/docker /etc/docker
+I0811 23:18:19.183345   80322 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0811 23:18:19.240526   80322 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:55015 SSHKeyPath:/Users/boye028451/.minikube/machines/minikube/id_rsa Username:docker}
+I0811 23:18:19.330080   80322 ssh_runner.go:362] scp /Users/boye028451/.minikube/certs/ca.pem --> /etc/docker/ca.pem (1090 bytes)
+I0811 23:18:19.344947   80322 ssh_runner.go:362] scp /Users/boye028451/.minikube/machines/server.pem --> /etc/docker/server.pem (1212 bytes)
+I0811 23:18:19.359504   80322 ssh_runner.go:362] scp /Users/boye028451/.minikube/machines/server-key.pem --> /etc/docker/server-key.pem (1679 bytes)
+I0811 23:18:19.373457   80322 provision.go:86] duration metric: configureAuth took 375.200208ms
+I0811 23:18:19.373468   80322 ubuntu.go:193] setting minikube options for container-runtime
+I0811 23:18:19.373823   80322 config.go:180] Loaded profile config "minikube": Driver=docker, ContainerRuntime=docker, KubernetesVersion=v1.24.3
+I0811 23:18:19.373877   80322 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0811 23:18:19.435191   80322 main.go:134] libmachine: Using SSH client type: native
+I0811 23:18:19.436500   80322 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x10242c890] 0x10242f3b0 <nil>  [] 0s} 127.0.0.1 55015 <nil> <nil>}
+I0811 23:18:19.436512   80322 main.go:134] libmachine: About to run SSH command:
+df --output=fstype / | tail -n 1
+I0811 23:18:19.554117   80322 main.go:134] libmachine: SSH cmd err, output: <nil>: overlay
+
+I0811 23:18:19.554126   80322 ubuntu.go:71] root file system type: overlay
+I0811 23:18:19.554257   80322 provision.go:309] Updating docker unit: /lib/systemd/system/docker.service ...
+I0811 23:18:19.554357   80322 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0811 23:18:19.617645   80322 main.go:134] libmachine: Using SSH client type: native
+I0811 23:18:19.617886   80322 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x10242c890] 0x10242f3b0 <nil>  [] 0s} 127.0.0.1 55015 <nil> <nil>}
+I0811 23:18:19.617931   80322 main.go:134] libmachine: About to run SSH command:
+sudo mkdir -p /lib/systemd/system && printf %!s(MISSING) "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+I0811 23:18:19.743162   80322 main.go:134] libmachine: SSH cmd err, output: <nil>: [Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+BindsTo=containerd.service
+After=network-online.target firewalld.service containerd.service
+Wants=network-online.target
+Requires=docker.socket
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+I0811 23:18:19.743349   80322 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0811 23:18:19.825357   80322 main.go:134] libmachine: Using SSH client type: native
+I0811 23:18:19.825521   80322 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x10242c890] 0x10242f3b0 <nil>  [] 0s} 127.0.0.1 55015 <nil> <nil>}
+I0811 23:18:19.825530   80322 main.go:134] libmachine: About to run SSH command:
+sudo diff -u /lib/systemd/system/docker.service /lib/systemd/system/docker.service.new || { sudo mv /lib/systemd/system/docker.service.new /lib/systemd/system/docker.service; sudo systemctl -f daemon-reload && sudo systemctl -f enable docker && sudo systemctl -f restart docker; }
+I0811 23:18:20.358475   80322 main.go:134] libmachine: SSH cmd err, output: <nil>: --- /lib/systemd/system/docker.service	2022-06-06 23:00:44.000000000 +0000
++++ /lib/systemd/system/docker.service.new	2022-08-11 23:18:19.740448003 +0000
+@@ -1,30 +1,32 @@
+ [Unit]
+ Description=Docker Application Container Engine
+ Documentation=https://docs.docker.com
+-After=network-online.target docker.socket firewalld.service containerd.service
++BindsTo=containerd.service
++After=network-online.target firewalld.service containerd.service
+ Wants=network-online.target
+-Requires=docker.socket containerd.service
++Requires=docker.socket
++StartLimitBurst=3
++StartLimitIntervalSec=60
+ 
+ [Service]
+ Type=notify
+-# the default is not to use systemd for cgroups because the delegate issues still
+-# exists and systemd currently does not support the cgroup feature set required
+-# for containers run by docker
+-ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+-ExecReload=/bin/kill -s HUP $MAINPID
+-TimeoutSec=0
+-RestartSec=2
+-Restart=always
+-
+-# Note that StartLimit* options were moved from "Service" to "Unit" in systemd 229.
+-# Both the old, and new location are accepted by systemd 229 and up, so using the old location
+-# to make them work for either version of systemd.
+-StartLimitBurst=3
++Restart=on-failure
+ 
+-# Note that StartLimitInterval was renamed to StartLimitIntervalSec in systemd 230.
+-# Both the old, and new name are accepted by systemd 230 and up, so using the old name to make
+-# this option work for either version of systemd.
+-StartLimitInterval=60s
++
++
++# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
++# The base configuration already specifies an 'ExecStart=...' command. The first directive
++# here is to clear out that command inherited from the base configuration. Without this,
++# the command from the base configuration and the command specified here are treated as
++# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
++# will catch this invalid input and refuse to start the service with an error like:
++#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
++
++# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
++# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
++ExecStart=
++ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12 
++ExecReload=/bin/kill -s HUP $MAINPID
+ 
+ # Having non-zero Limit*s causes performance problems due to accounting overhead
+ # in the kernel. We recommend using cgroups to do container-local accounting.
+@@ -32,16 +34,16 @@
+ LimitNPROC=infinity
+ LimitCORE=infinity
+ 
+-# Comment TasksMax if your systemd version does not support it.
+-# Only systemd 226 and above support this option.
++# Uncomment TasksMax if your systemd version supports it.
++# Only systemd 226 and above support this version.
+ TasksMax=infinity
++TimeoutStartSec=0
+ 
+ # set delegate yes so that systemd does not reset the cgroups of docker containers
+ Delegate=yes
+ 
+ # kill only the docker process, not all processes in the cgroup
+ KillMode=process
+-OOMScoreAdjust=-500
+ 
+ [Install]
+ WantedBy=multi-user.target
+Synchronizing state of docker.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable docker
+
+I0811 23:18:20.358499   80322 machine.go:91] provisioned docker machine in 1.723145375s
+I0811 23:18:20.358508   80322 client.go:171] LocalClient.Create took 14.258643709s
+I0811 23:18:20.358552   80322 start.go:174] duration metric: libmachine.API.Create for "minikube" took 14.258720042s
+I0811 23:18:20.358559   80322 start.go:307] post-start starting for "minikube" (driver="docker")
+I0811 23:18:20.358565   80322 start.go:335] creating required directories: [/etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs]
+I0811 23:18:20.358703   80322 ssh_runner.go:195] Run: sudo mkdir -p /etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs
+I0811 23:18:20.358762   80322 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0811 23:18:20.439689   80322 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:55015 SSHKeyPath:/Users/boye028451/.minikube/machines/minikube/id_rsa Username:docker}
+I0811 23:18:20.523841   80322 ssh_runner.go:195] Run: cat /etc/os-release
+I0811 23:18:20.528748   80322 main.go:134] libmachine: Couldn't set key PRIVACY_POLICY_URL, no corresponding struct field found
+I0811 23:18:20.528767   80322 main.go:134] libmachine: Couldn't set key VERSION_CODENAME, no corresponding struct field found
+I0811 23:18:20.528781   80322 main.go:134] libmachine: Couldn't set key UBUNTU_CODENAME, no corresponding struct field found
+I0811 23:18:20.528787   80322 info.go:137] Remote host: Ubuntu 20.04.4 LTS
+I0811 23:18:20.528797   80322 filesync.go:126] Scanning /Users/boye028451/.minikube/addons for local assets ...
+I0811 23:18:20.529084   80322 filesync.go:126] Scanning /Users/boye028451/.minikube/files for local assets ...
+I0811 23:18:20.529159   80322 start.go:310] post-start completed in 170.593708ms
+I0811 23:18:20.530092   80322 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I0811 23:18:20.595971   80322 profile.go:148] Saving config to /Users/boye028451/.minikube/profiles/minikube/config.json ...
+I0811 23:18:20.596363   80322 ssh_runner.go:195] Run: sh -c "df -h /var | awk 'NR==2{print $5}'"
+I0811 23:18:20.596419   80322 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0811 23:18:20.655190   80322 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:55015 SSHKeyPath:/Users/boye028451/.minikube/machines/minikube/id_rsa Username:docker}
+I0811 23:18:20.736542   80322 ssh_runner.go:195] Run: sh -c "df -BG /var | awk 'NR==2{print $4}'"
+I0811 23:18:20.741462   80322 start.go:135] duration metric: createHost completed in 14.687135291s
+I0811 23:18:20.741471   80322 start.go:82] releasing machines lock for "minikube", held for 14.687448875s
+I0811 23:18:20.741532   80322 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I0811 23:18:20.801718   80322 ssh_runner.go:195] Run: curl -sS -m 2 https://k8s.gcr.io/
+I0811 23:18:20.801820   80322 ssh_runner.go:195] Run: systemctl --version
+I0811 23:18:20.801897   80322 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0811 23:18:20.802680   80322 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0811 23:18:20.864202   80322 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:55015 SSHKeyPath:/Users/boye028451/.minikube/machines/minikube/id_rsa Username:docker}
+I0811 23:18:20.866821   80322 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:55015 SSHKeyPath:/Users/boye028451/.minikube/machines/minikube/id_rsa Username:docker}
+I0811 23:18:21.451719   80322 ssh_runner.go:195] Run: sudo systemctl cat docker.service
+I0811 23:18:21.476997   80322 cruntime.go:273] skipping containerd shutdown because we are bound to it
+I0811 23:18:21.478513   80322 ssh_runner.go:195] Run: sudo systemctl is-active --quiet service crio
+I0811 23:18:21.492730   80322 ssh_runner.go:195] Run: /bin/bash -c "sudo mkdir -p /etc && printf %!s(MISSING) "runtime-endpoint: unix:///var/run/cri-dockerd.sock
+image-endpoint: unix:///var/run/cri-dockerd.sock
+" | sudo tee /etc/crictl.yaml"
+I0811 23:18:21.506948   80322 ssh_runner.go:195] Run: sudo systemctl unmask docker.service
+I0811 23:18:21.573961   80322 ssh_runner.go:195] Run: sudo systemctl enable docker.socket
+I0811 23:18:21.632922   80322 ssh_runner.go:195] Run: sudo systemctl daemon-reload
+I0811 23:18:21.694769   80322 ssh_runner.go:195] Run: sudo systemctl restart docker
+I0811 23:18:21.872940   80322 ssh_runner.go:195] Run: sudo systemctl enable cri-docker.socket
+I0811 23:18:21.935994   80322 ssh_runner.go:195] Run: sudo systemctl daemon-reload
+I0811 23:18:21.999379   80322 ssh_runner.go:195] Run: sudo systemctl start cri-docker.socket
+I0811 23:18:22.010710   80322 start.go:450] Will wait 60s for socket path /var/run/cri-dockerd.sock
+I0811 23:18:22.011784   80322 ssh_runner.go:195] Run: stat /var/run/cri-dockerd.sock
+I0811 23:18:22.016237   80322 start.go:471] Will wait 60s for crictl version
+I0811 23:18:22.016330   80322 ssh_runner.go:195] Run: sudo crictl version
+I0811 23:18:22.120747   80322 start.go:480] Version:  0.1.0
+RuntimeName:  docker
+RuntimeVersion:  20.10.17
+RuntimeApiVersion:  1.41.0
+I0811 23:18:22.120884   80322 ssh_runner.go:195] Run: docker version --format {{.Server.Version}}
+I0811 23:18:22.155487   80322 ssh_runner.go:195] Run: docker version --format {{.Server.Version}}
+I0811 23:18:22.209347   80322 out.go:204] 🐳  Préparation de Kubernetes v1.24.3 sur Docker 20.10.17...
+I0811 23:18:22.209991   80322 cli_runner.go:164] Run: docker exec -t minikube dig +short host.docker.internal
+I0811 23:18:22.375023   80322 network.go:96] got host ip for mount in container by digging dns: 192.168.65.2
+I0811 23:18:22.375623   80322 ssh_runner.go:195] Run: grep 192.168.65.2	host.minikube.internal$ /etc/hosts
+I0811 23:18:22.380046   80322 ssh_runner.go:195] Run: /bin/bash -c "{ grep -v $'\thost.minikube.internal$' "/etc/hosts"; echo "192.168.65.2	host.minikube.internal"; } > /tmp/h.$$; sudo cp /tmp/h.$$ "/etc/hosts""
+I0811 23:18:22.392076   80322 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "8443/tcp") 0).HostPort}}'" minikube
+I0811 23:18:22.456647   80322 preload.go:132] Checking if preload exists for k8s version v1.24.3 and runtime docker
+I0811 23:18:22.456711   80322 ssh_runner.go:195] Run: docker images --format {{.Repository}}:{{.Tag}}
+I0811 23:18:22.483623   80322 docker.go:611] Got preloaded images: -- stdout --
+k8s.gcr.io/kube-apiserver:v1.24.3
+k8s.gcr.io/kube-controller-manager:v1.24.3
+k8s.gcr.io/kube-proxy:v1.24.3
+k8s.gcr.io/kube-scheduler:v1.24.3
+k8s.gcr.io/etcd:3.5.3-0
+k8s.gcr.io/pause:3.7
+k8s.gcr.io/coredns/coredns:v1.8.6
+gcr.io/k8s-minikube/storage-provisioner:v5
+
+-- /stdout --
+I0811 23:18:22.483871   80322 docker.go:542] Images already preloaded, skipping extraction
+I0811 23:18:22.484114   80322 ssh_runner.go:195] Run: docker images --format {{.Repository}}:{{.Tag}}
+I0811 23:18:22.510809   80322 docker.go:611] Got preloaded images: -- stdout --
+k8s.gcr.io/kube-apiserver:v1.24.3
+k8s.gcr.io/kube-proxy:v1.24.3
+k8s.gcr.io/kube-controller-manager:v1.24.3
+k8s.gcr.io/kube-scheduler:v1.24.3
+k8s.gcr.io/etcd:3.5.3-0
+k8s.gcr.io/pause:3.7
+k8s.gcr.io/coredns/coredns:v1.8.6
+gcr.io/k8s-minikube/storage-provisioner:v5
+
+-- /stdout --
+I0811 23:18:22.510822   80322 cache_images.go:84] Images are preloaded, skipping loading
+I0811 23:18:22.510888   80322 ssh_runner.go:195] Run: docker info --format {{.CgroupDriver}}
+I0811 23:18:22.595577   80322 cni.go:95] Creating CNI manager for ""
+I0811 23:18:22.595843   80322 cni.go:169] CNI unnecessary in this configuration, recommending no CNI
+I0811 23:18:22.597257   80322 kubeadm.go:87] Using pod CIDR: 10.244.0.0/16
+I0811 23:18:22.597315   80322 kubeadm.go:158] kubeadm options: {CertDir:/var/lib/minikube/certs ServiceCIDR:10.96.0.0/12 PodSubnet:10.244.0.0/16 AdvertiseAddress:192.168.49.2 APIServerPort:8443 KubernetesVersion:v1.24.3 EtcdDataDir:/var/lib/minikube/etcd EtcdExtraArgs:map[] ClusterName:minikube NodeName:minikube DNSDomain:cluster.local CRISocket:/var/run/cri-dockerd.sock ImageRepository: ComponentOptions:[{Component:apiServer ExtraArgs:map[enable-admission-plugins:NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota] Pairs:map[certSANs:["127.0.0.1", "localhost", "192.168.49.2"]]} {Component:controllerManager ExtraArgs:map[allocate-node-cidrs:true leader-elect:false] Pairs:map[]} {Component:scheduler ExtraArgs:map[leader-elect:false] Pairs:map[]}] FeatureArgs:map[] NoTaintMaster:true NodeIP:192.168.49.2 CgroupDriver:systemd ClientCAFile:/var/lib/minikube/certs/ca.crt StaticPodPath:/etc/kubernetes/manifests ControlPlaneAddress:control-plane.minikube.internal KubeProxyOptions:map[]}
+I0811 23:18:22.597554   80322 kubeadm.go:162] kubeadm config:
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: InitConfiguration
+localAPIEndpoint:
+  advertiseAddress: 192.168.49.2
+  bindPort: 8443
+bootstrapTokens:
+  - groups:
+      - system:bootstrappers:kubeadm:default-node-token
+    ttl: 24h0m0s
+    usages:
+      - signing
+      - authentication
+nodeRegistration:
+  criSocket: /var/run/cri-dockerd.sock
+  name: "minikube"
+  kubeletExtraArgs:
+    node-ip: 192.168.49.2
+  taints: []
+---
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: ClusterConfiguration
+apiServer:
+  certSANs: ["127.0.0.1", "localhost", "192.168.49.2"]
+  extraArgs:
+    enable-admission-plugins: "NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota"
+controllerManager:
+  extraArgs:
+    allocate-node-cidrs: "true"
+    leader-elect: "false"
+scheduler:
+  extraArgs:
+    leader-elect: "false"
+certificatesDir: /var/lib/minikube/certs
+clusterName: mk
+controlPlaneEndpoint: control-plane.minikube.internal:8443
+etcd:
+  local:
+    dataDir: /var/lib/minikube/etcd
+    extraArgs:
+      proxy-refresh-interval: "70000"
+kubernetesVersion: v1.24.3
+networking:
+  dnsDomain: cluster.local
+  podSubnet: "10.244.0.0/16"
+  serviceSubnet: 10.96.0.0/12
+---
+apiVersion: kubelet.config.k8s.io/v1beta1
+kind: KubeletConfiguration
+authentication:
+  x509:
+    clientCAFile: /var/lib/minikube/certs/ca.crt
+cgroupDriver: systemd
+clusterDomain: "cluster.local"
+# disable disk resource management by default
+imageGCHighThresholdPercent: 100
+evictionHard:
+  nodefs.available: "0%!"(MISSING)
+  nodefs.inodesFree: "0%!"(MISSING)
+  imagefs.available: "0%!"(MISSING)
+failSwapOn: false
+staticPodPath: /etc/kubernetes/manifests
+---
+apiVersion: kubeproxy.config.k8s.io/v1alpha1
+kind: KubeProxyConfiguration
+clusterCIDR: "10.244.0.0/16"
+metricsBindAddress: 0.0.0.0:10249
+conntrack:
+  maxPerCore: 0
+# Skip setting "net.netfilter.nf_conntrack_tcp_timeout_established"
+  tcpEstablishedTimeout: 0s
+# Skip setting "net.netfilter.nf_conntrack_tcp_timeout_close"
+  tcpCloseWaitTimeout: 0s
+
+I0811 23:18:22.597705   80322 kubeadm.go:961] kubelet [Unit]
+Wants=docker.socket
+
+[Service]
+ExecStart=
+ExecStart=/var/lib/minikube/binaries/v1.24.3/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime=remote --container-runtime-endpoint=/var/run/cri-dockerd.sock --hostname-override=minikube --image-service-endpoint=/var/run/cri-dockerd.sock --kubeconfig=/etc/kubernetes/kubelet.conf --node-ip=192.168.49.2 --runtime-request-timeout=15m
+
+[Install]
+ config:
+{KubernetesVersion:v1.24.3 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:}
+I0811 23:18:22.597815   80322 ssh_runner.go:195] Run: sudo ls /var/lib/minikube/binaries/v1.24.3
+I0811 23:18:22.605714   80322 binaries.go:44] Found k8s binaries, skipping transfer
+I0811 23:18:22.606285   80322 ssh_runner.go:195] Run: sudo mkdir -p /etc/systemd/system/kubelet.service.d /lib/systemd/system /var/tmp/minikube
+I0811 23:18:22.613248   80322 ssh_runner.go:362] scp memory --> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf (470 bytes)
+I0811 23:18:22.625049   80322 ssh_runner.go:362] scp memory --> /lib/systemd/system/kubelet.service (352 bytes)
+I0811 23:18:22.637056   80322 ssh_runner.go:362] scp memory --> /var/tmp/minikube/kubeadm.yaml.new (2030 bytes)
+I0811 23:18:22.649972   80322 ssh_runner.go:195] Run: grep 192.168.49.2	control-plane.minikube.internal$ /etc/hosts
+I0811 23:18:22.653922   80322 ssh_runner.go:195] Run: /bin/bash -c "{ grep -v $'\tcontrol-plane.minikube.internal$' "/etc/hosts"; echo "192.168.49.2	control-plane.minikube.internal"; } > /tmp/h.$$; sudo cp /tmp/h.$$ "/etc/hosts""
+I0811 23:18:22.662906   80322 certs.go:54] Setting up /Users/boye028451/.minikube/profiles/minikube for IP: 192.168.49.2
+I0811 23:18:22.664062   80322 certs.go:182] skipping minikubeCA CA generation: /Users/boye028451/.minikube/ca.key
+I0811 23:18:22.664405   80322 certs.go:182] skipping proxyClientCA CA generation: /Users/boye028451/.minikube/proxy-client-ca.key
+I0811 23:18:22.664476   80322 certs.go:302] generating minikube-user signed cert: /Users/boye028451/.minikube/profiles/minikube/client.key
+I0811 23:18:22.664694   80322 crypto.go:68] Generating cert /Users/boye028451/.minikube/profiles/minikube/client.crt with IP's: []
+I0811 23:18:22.903092   80322 crypto.go:156] Writing cert to /Users/boye028451/.minikube/profiles/minikube/client.crt ...
+I0811 23:18:22.903117   80322 lock.go:35] WriteFile acquiring /Users/boye028451/.minikube/profiles/minikube/client.crt: {Name:mk1faac3eb4f99920da513d423de0e153bab41c2 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0811 23:18:22.903623   80322 crypto.go:164] Writing key to /Users/boye028451/.minikube/profiles/minikube/client.key ...
+I0811 23:18:22.903627   80322 lock.go:35] WriteFile acquiring /Users/boye028451/.minikube/profiles/minikube/client.key: {Name:mkb495847d0c72cb348f7326ebe15ffdf2da646f Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0811 23:18:22.903762   80322 certs.go:302] generating minikube signed cert: /Users/boye028451/.minikube/profiles/minikube/apiserver.key.dd3b5fb2
+I0811 23:18:22.903774   80322 crypto.go:68] Generating cert /Users/boye028451/.minikube/profiles/minikube/apiserver.crt.dd3b5fb2 with IP's: [192.168.49.2 10.96.0.1 127.0.0.1 10.0.0.1]
+I0811 23:18:23.015958   80322 crypto.go:156] Writing cert to /Users/boye028451/.minikube/profiles/minikube/apiserver.crt.dd3b5fb2 ...
+I0811 23:18:23.015967   80322 lock.go:35] WriteFile acquiring /Users/boye028451/.minikube/profiles/minikube/apiserver.crt.dd3b5fb2: {Name:mke579b7f7b4b2249d3add9299f7f03f97803ba2 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0811 23:18:23.016173   80322 crypto.go:164] Writing key to /Users/boye028451/.minikube/profiles/minikube/apiserver.key.dd3b5fb2 ...
+I0811 23:18:23.016176   80322 lock.go:35] WriteFile acquiring /Users/boye028451/.minikube/profiles/minikube/apiserver.key.dd3b5fb2: {Name:mkccd6896be872967f2a6031d7642f1dbe4d6a2a Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0811 23:18:23.016275   80322 certs.go:320] copying /Users/boye028451/.minikube/profiles/minikube/apiserver.crt.dd3b5fb2 -> /Users/boye028451/.minikube/profiles/minikube/apiserver.crt
+I0811 23:18:23.016372   80322 certs.go:324] copying /Users/boye028451/.minikube/profiles/minikube/apiserver.key.dd3b5fb2 -> /Users/boye028451/.minikube/profiles/minikube/apiserver.key
+I0811 23:18:23.016468   80322 certs.go:302] generating aggregator signed cert: /Users/boye028451/.minikube/profiles/minikube/proxy-client.key
+I0811 23:18:23.016475   80322 crypto.go:68] Generating cert /Users/boye028451/.minikube/profiles/minikube/proxy-client.crt with IP's: []
+I0811 23:18:23.162127   80322 crypto.go:156] Writing cert to /Users/boye028451/.minikube/profiles/minikube/proxy-client.crt ...
+I0811 23:18:23.162134   80322 lock.go:35] WriteFile acquiring /Users/boye028451/.minikube/profiles/minikube/proxy-client.crt: {Name:mk6bc3f71de957883de5e002c20ba8221e184100 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0811 23:18:23.162424   80322 crypto.go:164] Writing key to /Users/boye028451/.minikube/profiles/minikube/proxy-client.key ...
+I0811 23:18:23.162427   80322 lock.go:35] WriteFile acquiring /Users/boye028451/.minikube/profiles/minikube/proxy-client.key: {Name:mk0a0dcb61b8fe25792b45451af0f730c08acde4 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0811 23:18:23.162759   80322 certs.go:388] found cert: /Users/boye028451/.minikube/certs/Users/boye028451/.minikube/certs/ca-key.pem (1679 bytes)
+I0811 23:18:23.162787   80322 certs.go:388] found cert: /Users/boye028451/.minikube/certs/Users/boye028451/.minikube/certs/ca.pem (1090 bytes)
+I0811 23:18:23.162818   80322 certs.go:388] found cert: /Users/boye028451/.minikube/certs/Users/boye028451/.minikube/certs/cert.pem (1131 bytes)
+I0811 23:18:23.162841   80322 certs.go:388] found cert: /Users/boye028451/.minikube/certs/Users/boye028451/.minikube/certs/key.pem (1679 bytes)
+I0811 23:18:23.163274   80322 ssh_runner.go:362] scp /Users/boye028451/.minikube/profiles/minikube/apiserver.crt --> /var/lib/minikube/certs/apiserver.crt (1399 bytes)
+I0811 23:18:23.202865   80322 ssh_runner.go:362] scp /Users/boye028451/.minikube/profiles/minikube/apiserver.key --> /var/lib/minikube/certs/apiserver.key (1679 bytes)
+I0811 23:18:23.221100   80322 ssh_runner.go:362] scp /Users/boye028451/.minikube/profiles/minikube/proxy-client.crt --> /var/lib/minikube/certs/proxy-client.crt (1147 bytes)
+I0811 23:18:23.236763   80322 ssh_runner.go:362] scp /Users/boye028451/.minikube/profiles/minikube/proxy-client.key --> /var/lib/minikube/certs/proxy-client.key (1675 bytes)
+I0811 23:18:23.251011   80322 ssh_runner.go:362] scp /Users/boye028451/.minikube/ca.crt --> /var/lib/minikube/certs/ca.crt (1111 bytes)
+I0811 23:18:23.265639   80322 ssh_runner.go:362] scp /Users/boye028451/.minikube/ca.key --> /var/lib/minikube/certs/ca.key (1679 bytes)
+I0811 23:18:23.280655   80322 ssh_runner.go:362] scp /Users/boye028451/.minikube/proxy-client-ca.crt --> /var/lib/minikube/certs/proxy-client-ca.crt (1119 bytes)
+I0811 23:18:23.295720   80322 ssh_runner.go:362] scp /Users/boye028451/.minikube/proxy-client-ca.key --> /var/lib/minikube/certs/proxy-client-ca.key (1675 bytes)
+I0811 23:18:23.311120   80322 ssh_runner.go:362] scp /Users/boye028451/.minikube/ca.crt --> /usr/share/ca-certificates/minikubeCA.pem (1111 bytes)
+I0811 23:18:23.326228   80322 ssh_runner.go:362] scp memory --> /var/lib/minikube/kubeconfig (738 bytes)
+I0811 23:18:23.339165   80322 ssh_runner.go:195] Run: openssl version
+I0811 23:18:23.344458   80322 ssh_runner.go:195] Run: sudo /bin/bash -c "test -s /usr/share/ca-certificates/minikubeCA.pem && ln -fs /usr/share/ca-certificates/minikubeCA.pem /etc/ssl/certs/minikubeCA.pem"
+I0811 23:18:23.352856   80322 ssh_runner.go:195] Run: ls -la /usr/share/ca-certificates/minikubeCA.pem
+I0811 23:18:23.357359   80322 certs.go:431] hashing: -rw-r--r-- 1 root root 1111 Aug 11 22:16 /usr/share/ca-certificates/minikubeCA.pem
+I0811 23:18:23.357450   80322 ssh_runner.go:195] Run: openssl x509 -hash -noout -in /usr/share/ca-certificates/minikubeCA.pem
+I0811 23:18:23.365261   80322 ssh_runner.go:195] Run: sudo /bin/bash -c "test -L /etc/ssl/certs/b5213941.0 || ln -fs /etc/ssl/certs/minikubeCA.pem /etc/ssl/certs/b5213941.0"
+I0811 23:18:23.372857   80322 kubeadm.go:395] StartCluster: {Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.33@sha256:73b259e144d926189cf169ae5b46bbec4e08e4e2f2bd87296054c3244f70feb8 Memory:4000 CPUs:2 DiskSize:20000 VMDriver: Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.24.3 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.24.3 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/Users:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath:}
+I0811 23:18:23.372998   80322 ssh_runner.go:195] Run: docker ps --filter status=paused --filter=name=k8s_.*_(kube-system)_ --format={{.ID}}
+I0811 23:18:23.401408   80322 ssh_runner.go:195] Run: sudo ls /var/lib/kubelet/kubeadm-flags.env /var/lib/kubelet/config.yaml /var/lib/minikube/etcd
+I0811 23:18:23.408733   80322 ssh_runner.go:195] Run: sudo cp /var/tmp/minikube/kubeadm.yaml.new /var/tmp/minikube/kubeadm.yaml
+I0811 23:18:23.415626   80322 kubeadm.go:221] ignoring SystemVerification for kubeadm because of docker driver
+I0811 23:18:23.415752   80322 ssh_runner.go:195] Run: sudo ls -la /etc/kubernetes/admin.conf /etc/kubernetes/kubelet.conf /etc/kubernetes/controller-manager.conf /etc/kubernetes/scheduler.conf
+I0811 23:18:23.422435   80322 kubeadm.go:152] config check failed, skipping stale config cleanup: sudo ls -la /etc/kubernetes/admin.conf /etc/kubernetes/kubelet.conf /etc/kubernetes/controller-manager.conf /etc/kubernetes/scheduler.conf: Process exited with status 2
+stdout:
+
+stderr:
+ls: cannot access '/etc/kubernetes/admin.conf': No such file or directory
+ls: cannot access '/etc/kubernetes/kubelet.conf': No such file or directory
+ls: cannot access '/etc/kubernetes/controller-manager.conf': No such file or directory
+ls: cannot access '/etc/kubernetes/scheduler.conf': No such file or directory
+I0811 23:18:23.422468   80322 ssh_runner.go:286] Start: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.24.3:$PATH" kubeadm init --config /var/tmp/minikube/kubeadm.yaml  --ignore-preflight-errors=DirAvailable--etc-kubernetes-manifests,DirAvailable--var-lib-minikube,DirAvailable--var-lib-minikube-etcd,FileAvailable--etc-kubernetes-manifests-kube-scheduler.yaml,FileAvailable--etc-kubernetes-manifests-kube-apiserver.yaml,FileAvailable--etc-kubernetes-manifests-kube-controller-manager.yaml,FileAvailable--etc-kubernetes-manifests-etcd.yaml,Port-10250,Swap,Mem,SystemVerification,FileContent--proc-sys-net-bridge-bridge-nf-call-iptables"
+I0811 23:18:23.674538   80322 out.go:204]     ▪ Génération des certificats et des clés
+I0811 23:18:26.207870   80322 out.go:204]     ▪ Démarrage du plan de contrôle ...
+I0811 23:18:37.244317   80322 out.go:204]     ▪ Configuration des règles RBAC ...
+I0811 23:18:37.667521   80322 cni.go:95] Creating CNI manager for ""
+I0811 23:18:37.667538   80322 cni.go:169] CNI unnecessary in this configuration, recommending no CNI
+I0811 23:18:37.667610   80322 ssh_runner.go:195] Run: /bin/bash -c "cat /proc/$(pgrep kube-apiserver)/oom_adj"
+I0811 23:18:37.667900   80322 ssh_runner.go:195] Run: sudo /var/lib/minikube/binaries/v1.24.3/kubectl create clusterrolebinding minikube-rbac --clusterrole=cluster-admin --serviceaccount=kube-system:default --kubeconfig=/var/lib/minikube/kubeconfig
+I0811 23:18:37.667973   80322 ssh_runner.go:195] Run: sudo /var/lib/minikube/binaries/v1.24.3/kubectl label nodes minikube.k8s.io/version=v1.26.1 minikube.k8s.io/commit=62e108c3dfdec8029a890ad6d8ef96b6461426dc minikube.k8s.io/name=minikube minikube.k8s.io/updated_at=2022_08_11T23_18_37_0700 minikube.k8s.io/primary=true --all --overwrite --kubeconfig=/var/lib/minikube/kubeconfig
+I0811 23:18:37.851674   80322 ops.go:34] apiserver oom_adj: -16
+I0811 23:18:37.851695   80322 kubeadm.go:1045] duration metric: took 183.960417ms to wait for elevateKubeSystemPrivileges.
+I0811 23:18:37.851711   80322 kubeadm.go:397] StartCluster complete in 14.478876584s
+I0811 23:18:37.851726   80322 settings.go:142] acquiring lock: {Name:mk7e6a39361c68673b7d3f99081dec7e492e7782 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0811 23:18:37.851886   80322 settings.go:150] Updating kubeconfig:  /Users/boye028451/.kube/config
+I0811 23:18:37.852655   80322 lock.go:35] WriteFile acquiring /Users/boye028451/.kube/config: {Name:mk375f5d2acb2f7f1b5275b19b8164625276d5c3 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0811 23:18:38.385780   80322 kapi.go:244] deployment "coredns" in namespace "kube-system" and context "minikube" rescaled to 1
+I0811 23:18:38.385840   80322 ssh_runner.go:195] Run: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.24.3/kubectl --kubeconfig=/var/lib/minikube/kubeconfig -n kube-system get configmap coredns -o yaml"
+I0811 23:18:38.385853   80322 start.go:211] Will wait 6m0s for node &{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.24.3 ContainerRuntime:docker ControlPlane:true Worker:true}
+I0811 23:18:38.404611   80322 out.go:177] 🔎  Vérification des composants Kubernetes...
+I0811 23:18:38.386895   80322 config.go:180] Loaded profile config "minikube": Driver=docker, ContainerRuntime=docker, KubernetesVersion=v1.24.3
+I0811 23:18:38.386991   80322 addons.go:412] enableAddons start: toEnable=map[], additional=[]
+I0811 23:18:38.445437   80322 ssh_runner.go:195] Run: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.24.3/kubectl --kubeconfig=/var/lib/minikube/kubeconfig -n kube-system get configmap coredns -o yaml | sed '/^        forward . \/etc\/resolv.conf.*/i \        hosts {\n           192.168.65.2 host.minikube.internal\n           fallthrough\n        }' | sudo /var/lib/minikube/binaries/v1.24.3/kubectl --kubeconfig=/var/lib/minikube/kubeconfig replace -f -"
+I0811 23:18:38.457997   80322 ssh_runner.go:195] Run: sudo systemctl is-active --quiet service kubelet
+I0811 23:18:38.458203   80322 addons.go:65] Setting storage-provisioner=true in profile "minikube"
+I0811 23:18:38.458234   80322 addons.go:153] Setting addon storage-provisioner=true in "minikube"
+W0811 23:18:38.458245   80322 addons.go:162] addon storage-provisioner should already be in state true
+I0811 23:18:38.458545   80322 addons.go:65] Setting default-storageclass=true in profile "minikube"
+I0811 23:18:38.458564   80322 addons_storage_classes.go:33] enableOrDisableStorageClasses default-storageclass=true on "minikube"
+I0811 23:18:38.459440   80322 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+I0811 23:18:38.461162   80322 host.go:66] Checking if "minikube" exists ...
+I0811 23:18:38.462632   80322 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+I0811 23:18:38.559419   80322 out.go:177]     ▪ Utilisation de l'image gcr.io/k8s-minikube/storage-provisioner:v5
+I0811 23:18:38.559678   80322 addons.go:153] Setting addon default-storageclass=true in "minikube"
+W0811 23:18:38.576544   80322 addons.go:162] addon default-storageclass should already be in state true
+I0811 23:18:38.576598   80322 host.go:66] Checking if "minikube" exists ...
+I0811 23:18:38.576641   80322 addons.go:345] installing /etc/kubernetes/addons/storage-provisioner.yaml
+I0811 23:18:38.576649   80322 ssh_runner.go:362] scp memory --> /etc/kubernetes/addons/storage-provisioner.yaml (2676 bytes)
+I0811 23:18:38.576704   80322 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0811 23:18:38.577636   80322 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+I0811 23:18:38.648927   80322 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:55015 SSHKeyPath:/Users/boye028451/.minikube/machines/minikube/id_rsa Username:docker}
+I0811 23:18:38.650013   80322 addons.go:345] installing /etc/kubernetes/addons/storageclass.yaml
+I0811 23:18:38.650024   80322 ssh_runner.go:362] scp memory --> /etc/kubernetes/addons/storageclass.yaml (271 bytes)
+I0811 23:18:38.650085   80322 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I0811 23:18:38.710816   80322 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:55015 SSHKeyPath:/Users/boye028451/.minikube/machines/minikube/id_rsa Username:docker}
+I0811 23:18:38.739352   80322 ssh_runner.go:195] Run: sudo KUBECONFIG=/var/lib/minikube/kubeconfig /var/lib/minikube/binaries/v1.24.3/kubectl apply -f /etc/kubernetes/addons/storage-provisioner.yaml
+I0811 23:18:38.800498   80322 ssh_runner.go:195] Run: sudo KUBECONFIG=/var/lib/minikube/kubeconfig /var/lib/minikube/binaries/v1.24.3/kubectl apply -f /etc/kubernetes/addons/storageclass.yaml
+I0811 23:18:39.091160   80322 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "8443/tcp") 0).HostPort}}'" minikube
+I0811 23:18:39.093032   80322 start.go:809] {"host.minikube.internal": 192.168.65.2} host record injected into CoreDNS
+I0811 23:18:39.167443   80322 api_server.go:51] waiting for apiserver process to appear ...
+I0811 23:18:39.167485   80322 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+I0811 23:18:39.181153   80322 api_server.go:71] duration metric: took 795.2775ms to wait for apiserver process to appear ...
+I0811 23:18:39.181165   80322 api_server.go:87] waiting for apiserver healthz status ...
+I0811 23:18:39.181180   80322 api_server.go:240] Checking apiserver healthz at https://127.0.0.1:55014/healthz ...
+I0811 23:18:39.217350   80322 out.go:177] 🌟  Modules activés: default-storageclass, storage-provisioner
+I0811 23:18:39.187126   80322 api_server.go:266] https://127.0.0.1:55014/healthz returned 200:
+ok
+I0811 23:18:39.219133   80322 api_server.go:140] control plane version: v1.24.3
+I0811 23:18:39.234690   80322 api_server.go:130] duration metric: took 53.519041ms to wait for apiserver health ...
+I0811 23:18:39.234705   80322 addons.go:414] enableAddons completed in 847.6965ms
+I0811 23:18:39.234851   80322 system_pods.go:43] waiting for kube-system pods to appear ...
+I0811 23:18:39.239959   80322 system_pods.go:59] 5 kube-system pods found
+I0811 23:18:39.239969   80322 system_pods.go:61] "etcd-minikube" [c68dedc0-a8a5-41f0-a68d-9b94429863ea] Pending
+I0811 23:18:39.239972   80322 system_pods.go:61] "kube-apiserver-minikube" [a347c272-2c0e-441d-9a31-d92a9ba81f9e] Pending
+I0811 23:18:39.239975   80322 system_pods.go:61] "kube-controller-manager-minikube" [e1b30331-58f5-4c24-9f53-47c0c5e286fe] Pending
+I0811 23:18:39.239977   80322 system_pods.go:61] "kube-scheduler-minikube" [dd0284ef-412d-427d-b0a5-3504ade016b6] Pending
+I0811 23:18:39.239980   80322 system_pods.go:61] "storage-provisioner" [d61b4e7e-e9da-4f15-8834-e6eb9a05b33c] Pending: PodScheduled:Unschedulable (0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready: }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.)
+I0811 23:18:39.239983   80322 system_pods.go:74] duration metric: took 5.128542ms to wait for pod list to return data ...
+I0811 23:18:39.239987   80322 kubeadm.go:572] duration metric: took 854.115417ms to wait for : map[apiserver:true system_pods:true] ...
+I0811 23:18:39.239995   80322 node_conditions.go:102] verifying NodePressure condition ...
+I0811 23:18:39.242677   80322 node_conditions.go:122] node storage ephemeral capacity is 61255492Ki
+I0811 23:18:39.242683   80322 node_conditions.go:123] node cpu capacity is 5
+I0811 23:18:39.242691   80322 node_conditions.go:105] duration metric: took 2.6945ms to run NodePressure ...
+I0811 23:18:39.242701   80322 start.go:216] waiting for startup goroutines ...
+I0811 23:18:39.321969   80322 start.go:506] kubectl: 1.24.3, cluster: 1.24.3 (minor skew: 0)
+I0811 23:18:39.373339   80322 out.go:177] 🏄  Terminé ! kubectl est maintenant configuré pour utiliser "minikube" cluster et espace de noms "default" par défaut.
+
+* 
+* ==> Docker <==
+* -- Logs begin at Thu 2022-08-11 23:18:18 UTC, end at Mon 2022-08-15 07:21:46 UTC. --
+Aug 13 13:09:09 minikube dockerd[589]: time="2022-08-13T13:09:09.798710091Z" level=info msg="ignoring event" container=89d6c28a2358ec13f627c92ee2e3341777cc7298652108a7e952828d3136e07e module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 13:14:16 minikube dockerd[589]: time="2022-08-13T13:14:16.831075761Z" level=info msg="ignoring event" container=b5cadd99b55c021bd7499fc1327b0a66f83719574bbb0c8d4a4403f1ed56b8b9 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 13:19:21 minikube dockerd[589]: time="2022-08-13T13:19:21.391095054Z" level=info msg="ignoring event" container=441731e3e6eba5b9b8a4e2689acca124037489fbdcdfc0643cc53c05ece47fd0 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 13:24:26 minikube dockerd[589]: time="2022-08-13T13:24:26.379509209Z" level=info msg="ignoring event" container=8b3f1832fcb8579e69ee47345d465246b58a05725dbc3379f0c404d4a329c6d2 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 13:29:39 minikube dockerd[589]: time="2022-08-13T13:29:39.369726132Z" level=info msg="ignoring event" container=ed359a4651010a687dc93cd86857a676fc63a682dc43f91ea363ddacd823f712 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 13:34:55 minikube dockerd[589]: time="2022-08-13T13:34:55.215408375Z" level=info msg="ignoring event" container=a42d5adc613dc2d450645dddbbfbb605852a540dd0b9b88b2a45e8d6f6c17108 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 13:40:02 minikube dockerd[589]: time="2022-08-13T13:40:02.652800920Z" level=info msg="ignoring event" container=67613e3895a40ad27d8b142ba97b32341de7803542d0e822e5f76947752cf659 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 13:45:05 minikube dockerd[589]: time="2022-08-13T13:45:05.577916588Z" level=info msg="ignoring event" container=e33c03002127316c8f647eac425545ca1a02ae625f107222341d43c49c79a35a module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 13:52:33 minikube dockerd[589]: time="2022-08-13T13:52:33.980836339Z" level=info msg="Attempting next endpoint for pull after error: errors:\nunauthorized: authentication required\nunauthorized: authentication required\n"
+Aug 13 13:52:33 minikube dockerd[589]: time="2022-08-13T13:52:33.980896839Z" level=info msg="Ignoring extra error returned from registry: unauthorized: authentication required"
+Aug 13 13:52:33 minikube dockerd[589]: time="2022-08-13T13:52:33.985649589Z" level=error msg="Handler for POST /v1.40/images/create returned error: unauthorized: authentication required"
+Aug 13 13:52:51 minikube dockerd[589]: time="2022-08-13T13:52:51.381219138Z" level=info msg="ignoring event" container=19e38c40b1dc1cf658e628f083a051aa4906c191af81b4bca1f7bb10dd11ccab module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 14:40:54 minikube dockerd[589]: time="2022-08-13T14:40:54.339207293Z" level=info msg="ignoring event" container=b8e8f47d14c5673d2028db4db8431f925a04da461f9cb72c284b7796e8bb35e4 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 14:50:37 minikube dockerd[589]: time="2022-08-13T14:50:37.620569002Z" level=info msg="ignoring event" container=7177400a207467fccd78075539df5ba736559ba104634649c6a119c96ba275d0 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 14:55:53 minikube dockerd[589]: time="2022-08-13T14:55:53.864878843Z" level=info msg="ignoring event" container=1e9d0056fe45389994b57971ee4a443c5bfc6076dd31b35d49dfcb33ee06884c module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 15:01:01 minikube dockerd[589]: time="2022-08-13T15:01:01.059790763Z" level=info msg="ignoring event" container=e5532a30f9e3168f4b6425d83827bb83506e241062d5b390e83c529abc3239d3 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 15:06:05 minikube dockerd[589]: time="2022-08-13T15:06:05.759932459Z" level=info msg="ignoring event" container=a796bcbcc2d0b9b994b121377b22ec1d58873f87808c7fd1d7a11be0b9adb9d4 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 15:11:18 minikube dockerd[589]: time="2022-08-13T15:11:18.274720132Z" level=info msg="ignoring event" container=c5da249bcc54101114064279da8aca8c0b7fd2189d82bdc676961f03fed2a0e4 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 15:16:35 minikube dockerd[589]: time="2022-08-13T15:16:35.048340792Z" level=info msg="ignoring event" container=5c41682b4ef3c1fc5d557fefc27edea7505e777a255c60a4de02da36c0905972 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 15:21:54 minikube dockerd[589]: time="2022-08-13T15:21:54.842528551Z" level=info msg="ignoring event" container=97592c0e9af149f393827b53eca07e3901baf6ebbf6ebeb8af9493828848c9e5 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 15:27:01 minikube dockerd[589]: time="2022-08-13T15:27:01.999348971Z" level=info msg="ignoring event" container=613f87e3b96db858a11a35666626129c18250171ab658e88dc3a99db9bd53311 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 15:28:33 minikube dockerd[589]: time="2022-08-13T15:28:33.835146250Z" level=info msg="ignoring event" container=5f5e806bfc46e4023498924200225aedb07608048d9c932204a8e5da9b528769 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 15:29:04 minikube dockerd[589]: time="2022-08-13T15:29:04.501481583Z" level=info msg="ignoring event" container=3120f36cb5deb1afd7b94d187df77031dc35e047910ce06e7b9d3171e0ef23ad module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 15:29:08 minikube dockerd[589]: time="2022-08-13T15:29:08.343846043Z" level=info msg="ignoring event" container=9b5f7f992ad7cb738dfcb9326f0e5d7d9cc0b3d6150f586e6c7b3c7a1f3e1667 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 15:29:24 minikube dockerd[589]: time="2022-08-13T15:29:24.881821593Z" level=info msg="ignoring event" container=8fcea155466dac3aac6264b53e0a5564096b874698147661faa0693f89acbf32 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 15:29:55 minikube dockerd[589]: time="2022-08-13T15:29:55.987136677Z" level=info msg="ignoring event" container=15fb8b8862af094cb6752c880f85deea8724296a6610a659578731f89c6b43ce module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 15:30:44 minikube dockerd[589]: time="2022-08-13T15:30:44.309053838Z" level=info msg="ignoring event" container=9157c231ad253855bfddc170963a674591a431c19e69f8a5e0b130bd9aaef547 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 15:32:10 minikube dockerd[589]: time="2022-08-13T15:32:10.904447586Z" level=info msg="ignoring event" container=2a0f5f2341cf653eaad99d00f1aa387557bb0774366928615c3a60e4ec55ac30 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 15:35:07 minikube dockerd[589]: time="2022-08-13T15:35:07.615333126Z" level=info msg="ignoring event" container=381a192d263a549c0bff036177d4060babbe5849c762bbfffaa9df90063ab1dd module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 15:40:13 minikube dockerd[589]: time="2022-08-13T15:40:13.143547629Z" level=info msg="ignoring event" container=03898e1ba73e8fa8a7fb6b6a743186022e7e52fe860381f35cfd1da141106a7c module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 15:40:42 minikube dockerd[589]: time="2022-08-13T15:40:42.967705254Z" level=info msg="ignoring event" container=18cdc9e8f7a7b5750732a572f4b3e18926c8ac99f0dd65e65890647119bd6e61 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 13 21:22:04 minikube dockerd[589]: time="2022-08-13T21:22:04.685905462Z" level=error msg="Not continuing with pull after error: context canceled"
+Aug 13 21:22:04 minikube dockerd[589]: time="2022-08-13T21:22:04.700954129Z" level=info msg="Layer sha256:ff4e9a7e4797bc5b170c4936ed183e613013f8a95ab33c17953670c28061b52e cleaned up"
+Aug 13 21:24:18 minikube dockerd[589]: time="2022-08-13T21:24:18.110391761Z" level=error msg="Not continuing with pull after error: context canceled"
+Aug 13 21:24:18 minikube dockerd[589]: time="2022-08-13T21:24:18.127524844Z" level=info msg="Layer sha256:ff4e9a7e4797bc5b170c4936ed183e613013f8a95ab33c17953670c28061b52e cleaned up"
+Aug 13 21:26:44 minikube dockerd[589]: time="2022-08-13T21:26:44.111099092Z" level=error msg="Not continuing with pull after error: context canceled"
+Aug 13 21:26:44 minikube dockerd[589]: time="2022-08-13T21:26:44.126326550Z" level=info msg="Layer sha256:ff4e9a7e4797bc5b170c4936ed183e613013f8a95ab33c17953670c28061b52e cleaned up"
+Aug 13 21:29:25 minikube dockerd[589]: time="2022-08-13T21:29:25.107135375Z" level=error msg="Not continuing with pull after error: context canceled"
+Aug 13 21:29:25 minikube dockerd[589]: time="2022-08-13T21:29:25.112796041Z" level=info msg="Layer sha256:d500ec4ddc255e32d59fa3ed330371b5fe0cc1e81745062947e0f251f6cb92d0 cleaned up"
+Aug 13 21:29:25 minikube dockerd[589]: time="2022-08-13T21:29:25.196118208Z" level=info msg="Layer sha256:57d43abca930be6c03fe57358331c2725ce141a08df77e8016344690c0b281ba cleaned up"
+Aug 13 21:29:25 minikube dockerd[589]: time="2022-08-13T21:29:25.196151000Z" level=info msg="Layer sha256:9f73d8a5e23778787a49eea0b3465e05fb7aba58770f8e76c197696b030a03f7 cleaned up"
+Aug 13 21:29:25 minikube dockerd[589]: time="2022-08-13T21:29:25.196158166Z" level=info msg="Layer sha256:3fa171c55448559c94c4fb838d087b586f7c1dd8c95bb8b6b1690442048aa48f cleaned up"
+Aug 13 21:29:25 minikube dockerd[589]: time="2022-08-13T21:29:25.196162333Z" level=info msg="Layer sha256:ff4e9a7e4797bc5b170c4936ed183e613013f8a95ab33c17953670c28061b52e cleaned up"
+Aug 13 21:31:40 minikube dockerd[589]: time="2022-08-13T21:31:40.674255632Z" level=info msg="Download failed, retrying (1/5): read tcp 192.168.49.2:60752->104.18.125.25:443: read: connection reset by peer"
+Aug 13 21:31:40 minikube dockerd[589]: time="2022-08-13T21:31:40.674774757Z" level=info msg="Download failed, retrying (1/5): read tcp 192.168.49.2:60748->104.18.125.25:443: read: connection reset by peer"
+Aug 13 21:31:40 minikube dockerd[589]: time="2022-08-13T21:31:40.674805965Z" level=info msg="Download failed, retrying (1/5): read tcp 192.168.49.2:60746->104.18.125.25:443: read: connection reset by peer"
+Aug 13 21:32:45 minikube dockerd[589]: time="2022-08-13T21:32:45.666180760Z" level=error msg="Not continuing with pull after error: context canceled"
+Aug 13 21:32:45 minikube dockerd[589]: time="2022-08-13T21:32:45.675254468Z" level=info msg="Layer sha256:ff4e9a7e4797bc5b170c4936ed183e613013f8a95ab33c17953670c28061b52e cleaned up"
+Aug 13 21:37:36 minikube dockerd[589]: time="2022-08-13T21:37:36.658805297Z" level=error msg="Not continuing with pull after error: context canceled"
+Aug 13 21:37:36 minikube dockerd[589]: time="2022-08-13T21:37:36.667147422Z" level=info msg="Layer sha256:ff4e9a7e4797bc5b170c4936ed183e613013f8a95ab33c17953670c28061b52e cleaned up"
+Aug 15 07:13:42 minikube dockerd[589]: time="2022-08-15T07:13:42.686512471Z" level=warning msg="reference for unknown type: " digest="sha256:64d8c73dca984af206adf9d6d7e46aa550362b1d7a01f3a0a91b20cc67868660" remote="k8s.gcr.io/ingress-nginx/kube-webhook-certgen@sha256:64d8c73dca984af206adf9d6d7e46aa550362b1d7a01f3a0a91b20cc67868660"
+Aug 15 07:15:09 minikube dockerd[589]: time="2022-08-15T07:15:09.328002178Z" level=info msg="ignoring event" container=bb6acac2b0a9fc904e7d231bbce013dd76d788fcbf6cf00e5c015ef79cd61fec module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 15 07:15:09 minikube dockerd[589]: time="2022-08-15T07:15:09.634938928Z" level=info msg="ignoring event" container=3bff461450bbfbd60ece1107ada9203fdf655b409d737ef7ae02ba499f666189 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 15 07:15:10 minikube dockerd[589]: time="2022-08-15T07:15:10.948556803Z" level=info msg="ignoring event" container=4c44068f357c7b7605f1f3e6ddf3afe5ff1b6c4bdda6e34df8c1a01a20b29a63 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 15 07:15:10 minikube dockerd[589]: time="2022-08-15T07:15:10.948746637Z" level=info msg="ignoring event" container=e628ae7fbf6feb19ffc9bfbaec4fd8b897a7472329167a42dc71bec8df0515b2 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Aug 15 07:15:58 minikube dockerd[589]: time="2022-08-15T07:15:58.202768256Z" level=warning msg="reference for unknown type: " digest="sha256:5516d103a9c2ecc4f026efbd4b40662ce22dc1f824fb129ed121460aaa5c47f8" remote="k8s.gcr.io/ingress-nginx/controller@sha256:5516d103a9c2ecc4f026efbd4b40662ce22dc1f824fb129ed121460aaa5c47f8"
+Aug 15 07:17:56 minikube dockerd[589]: time="2022-08-15T07:17:56.413110296Z" level=error msg="Not continuing with pull after error: context canceled"
+Aug 15 07:17:56 minikube dockerd[589]: time="2022-08-15T07:17:56.426762463Z" level=info msg="Layer sha256:f73e7dbfee583332e4288f887ee4189e325e7368454ca9ff167e56e7b47d33e4 cleaned up"
+Aug 15 07:20:10 minikube dockerd[589]: time="2022-08-15T07:20:10.184399136Z" level=error msg="Not continuing with pull after error: context canceled"
+Aug 15 07:20:10 minikube dockerd[589]: time="2022-08-15T07:20:10.193673178Z" level=info msg="Layer sha256:f73e7dbfee583332e4288f887ee4189e325e7368454ca9ff167e56e7b47d33e4 cleaned up"
+
+* 
+* ==> container status <==
+* CONTAINER           IMAGE                                                                                                                   CREATED             STATE               NAME                      ATTEMPT             POD ID
+3bff461450bbf       k8s.gcr.io/ingress-nginx/kube-webhook-certgen@sha256:64d8c73dca984af206adf9d6d7e46aa550362b1d7a01f3a0a91b20cc67868660   6 minutes ago       Exited              patch                     0                   4c44068f357c7
+bb6acac2b0a9f       k8s.gcr.io/ingress-nginx/kube-webhook-certgen@sha256:64d8c73dca984af206adf9d6d7e46aa550362b1d7a01f3a0a91b20cc67868660   6 minutes ago       Exited              create                    0                   e628ae7fbf6fe
+ef6bb33810de4       mongo-express@sha256:2a25aafdf23296823b06bc9a0a2af2656971262041b8dbf11b40444804fdc104                                   34 hours ago        Running             mongo-express             0                   5ac27b9dbcaaf
+defd2661b6949       mongo@sha256:ff4050d808f943c0835c0aa24cce07afd86193253713020ca399a2b6c7840a03                                           40 hours ago        Running             mongodb                   0                   0b431e583b858
+737f65d066c98       ba04bb24b9575                                                                                                           3 days ago          Running             storage-provisioner       1                   3b6a1badee627
+e8d352d3a3a81       edaa71f2aee88                                                                                                           3 days ago          Running             coredns                   0                   e3b287615d998
+a8cc8f594b70e       7a75aeb869dce                                                                                                           3 days ago          Running             kube-proxy                0                   d520f98ca0330
+a266fbb0709cc       ba04bb24b9575                                                                                                           3 days ago          Exited              storage-provisioner       0                   3b6a1badee627
+a2812e1d68f00       8f1507b1a173a                                                                                                           3 days ago          Running             kube-scheduler            0                   f0c1e1b7d4acf
+cc4fa7cfd51cc       531fdfc5fea67                                                                                                           3 days ago          Running             kube-apiserver            0                   31f9b963e5531
+f0ac7a45ae0cf       f98535efcd55d                                                                                                           3 days ago          Running             kube-controller-manager   0                   26a0e142f63c7
+95ffe448e221a       a9a710bb96df0                                                                                                           3 days ago          Running             etcd                      0                   b4b0eadc38ff8
+
+* 
+* ==> coredns [e8d352d3a3a8] <==
+* .:53
+[INFO] plugin/reload: Running configuration MD5 = c23ed519c17e71ee396ed052e6209e94
+CoreDNS-1.8.6
+linux/arm64, go1.17.1, 13a9191
+[ERROR] plugin/errors: 2 5351077322307269985.838864829796858424. HINFO: read udp 172.17.0.2:34401->192.168.65.2:53: i/o timeout
+[ERROR] plugin/errors: 2 5351077322307269985.838864829796858424. HINFO: read udp 172.17.0.2:35026->192.168.65.2:53: i/o timeout
+[ERROR] plugin/errors: 2 5351077322307269985.838864829796858424. HINFO: read udp 172.17.0.2:41662->192.168.65.2:53: i/o timeout
+[ERROR] plugin/errors: 2 5351077322307269985.838864829796858424. HINFO: read udp 172.17.0.2:37798->192.168.65.2:53: i/o timeout
+
+* 
+* ==> describe nodes <==
+* Name:               minikube
+Roles:              control-plane
+Labels:             beta.kubernetes.io/arch=arm64
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=arm64
+                    kubernetes.io/hostname=minikube
+                    kubernetes.io/os=linux
+                    minikube.k8s.io/commit=62e108c3dfdec8029a890ad6d8ef96b6461426dc
+                    minikube.k8s.io/name=minikube
+                    minikube.k8s.io/primary=true
+                    minikube.k8s.io/updated_at=2022_08_11T23_18_37_0700
+                    minikube.k8s.io/version=v1.26.1
+                    node-role.kubernetes.io/control-plane=
+                    node.kubernetes.io/exclude-from-external-load-balancers=
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: unix:///var/run/cri-dockerd.sock
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Thu, 11 Aug 2022 23:18:34 +0000
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  minikube
+  AcquireTime:     <unset>
+  RenewTime:       Mon, 15 Aug 2022 07:21:37 +0000
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Mon, 15 Aug 2022 07:20:31 +0000   Thu, 11 Aug 2022 23:18:32 +0000   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Mon, 15 Aug 2022 07:20:31 +0000   Thu, 11 Aug 2022 23:18:32 +0000   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Mon, 15 Aug 2022 07:20:31 +0000   Thu, 11 Aug 2022 23:18:32 +0000   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Mon, 15 Aug 2022 07:20:31 +0000   Thu, 11 Aug 2022 23:18:37 +0000   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  192.168.49.2
+  Hostname:    minikube
+Capacity:
+  cpu:                5
+  ephemeral-storage:  61255492Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             8039792Ki
+  pods:               110
+Allocatable:
+  cpu:                5
+  ephemeral-storage:  61255492Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             8039792Ki
+  pods:               110
+System Info:
+  Machine ID:                 3d7b8a8fb8714b779a1c54b6519a0106
+  System UUID:                3d7b8a8fb8714b779a1c54b6519a0106
+  Boot ID:                    a1524632-150d-4e33-9a62-a8bd208e5aa8
+  Kernel Version:             5.10.104-linuxkit
+  OS Image:                   Ubuntu 20.04.4 LTS
+  Operating System:           linux
+  Architecture:               arm64
+  Container Runtime Version:  docker://20.10.17
+  Kubelet Version:            v1.24.3
+  Kube-Proxy Version:         v1.24.3
+PodCIDR:                      10.244.0.0/24
+PodCIDRs:                     10.244.0.0/24
+Non-terminated Pods:          (10 in total)
+  Namespace                   Name                                         CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                         ------------  ----------  ---------------  -------------  ---
+  default                     mongo-express-deployment-98c6ff4b4-7v8kt     0 (0%!)(MISSING)        0 (0%!)(MISSING)      0 (0%!)(MISSING)           0 (0%!)(MISSING)         34h
+  default                     mongodb-deployment-67dcfb9c9f-cs6sn          0 (0%!)(MISSING)        0 (0%!)(MISSING)      0 (0%!)(MISSING)           0 (0%!)(MISSING)         39h
+  ingress-nginx               ingress-nginx-controller-755dfbfc65-sfbsw    100m (2%!)(MISSING)     0 (0%!)(MISSING)      90Mi (1%!)(MISSING)        0 (0%!)(MISSING)         8m6s
+  kube-system                 coredns-6d4b75cb6d-tfr7w                     100m (2%!)(MISSING)     0 (0%!)(MISSING)      70Mi (0%!)(MISSING)        170Mi (2%!)(MISSING)     3d8h
+  kube-system                 etcd-minikube                                100m (2%!)(MISSING)     0 (0%!)(MISSING)      100Mi (1%!)(MISSING)       0 (0%!)(MISSING)         3d8h
+  kube-system                 kube-apiserver-minikube                      250m (5%!)(MISSING)     0 (0%!)(MISSING)      0 (0%!)(MISSING)           0 (0%!)(MISSING)         3d8h
+  kube-system                 kube-controller-manager-minikube             200m (4%!)(MISSING)     0 (0%!)(MISSING)      0 (0%!)(MISSING)           0 (0%!)(MISSING)         3d8h
+  kube-system                 kube-proxy-ljk6q                             0 (0%!)(MISSING)        0 (0%!)(MISSING)      0 (0%!)(MISSING)           0 (0%!)(MISSING)         3d8h
+  kube-system                 kube-scheduler-minikube                      100m (2%!)(MISSING)     0 (0%!)(MISSING)      0 (0%!)(MISSING)           0 (0%!)(MISSING)         3d8h
+  kube-system                 storage-provisioner                          0 (0%!)(MISSING)        0 (0%!)(MISSING)      0 (0%!)(MISSING)           0 (0%!)(MISSING)         3d8h
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests    Limits
+  --------           --------    ------
+  cpu                850m (17%!)(MISSING)  0 (0%!)(MISSING)
+  memory             260Mi (3%!)(MISSING)  170Mi (2%!)(MISSING)
+  ephemeral-storage  0 (0%!)(MISSING)      0 (0%!)(MISSING)
+  hugepages-1Gi      0 (0%!)(MISSING)      0 (0%!)(MISSING)
+  hugepages-2Mi      0 (0%!)(MISSING)      0 (0%!)(MISSING)
+  hugepages-32Mi     0 (0%!)(MISSING)      0 (0%!)(MISSING)
+  hugepages-64Ki     0 (0%!)(MISSING)      0 (0%!)(MISSING)
+Events:              <none>
+
+* 
+* ==> dmesg <==
+* [Aug14 14:42] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[  +0.028245] the cryptoloop driver has been deprecated and will be removed in in Linux 5.16
+[  +7.415359] grpcfuse: loading out-of-tree module taints kernel.
+[Aug14 15:22] hrtimer: interrupt took 4373917 ns
+
+* 
+* ==> etcd [95ffe448e221] <==
+* {"level":"info","ts":"2022-08-14T10:03:34.827Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":36315,"took":"445.75µs"}
+{"level":"info","ts":"2022-08-14T11:11:51.395Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":36525}
+{"level":"info","ts":"2022-08-14T11:11:51.397Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":36525,"took":"915.875µs"}
+{"level":"info","ts":"2022-08-14T11:15:27.362Z","caller":"traceutil/trace.go:171","msg":"trace[39965038] linearizableReadLoop","detail":"{readStateIndex:47404; appliedIndex:47403; }","duration":"160.229834ms","start":"2022-08-14T11:15:27.202Z","end":"2022-08-14T11:15:27.362Z","steps":["trace[39965038] 'read index received'  (duration: 156.686334ms)","trace[39965038] 'applied index is now lower than readState.Index'  (duration: 3.543083ms)"],"step_count":2}
+{"level":"info","ts":"2022-08-14T11:15:27.362Z","caller":"traceutil/trace.go:171","msg":"trace[1475063587] transaction","detail":"{read_only:false; response_revision:36886; number_of_response:1; }","duration":"161.076125ms","start":"2022-08-14T11:15:27.201Z","end":"2022-08-14T11:15:27.362Z","steps":["trace[1475063587] 'process raft request'  (duration: 157.478708ms)"],"step_count":1}
+{"level":"warn","ts":"2022-08-14T11:15:27.363Z","caller":"etcdserver/util.go:166","msg":"apply request took too long","took":"160.900459ms","expected-duration":"100ms","prefix":"read-only range ","request":"key:\"/registry/services/endpoints/kube-system/k8s.io-minikube-hostpath\" ","response":"range_response_count:1 size:606"}
+{"level":"info","ts":"2022-08-14T11:15:27.363Z","caller":"traceutil/trace.go:171","msg":"trace[782150132] range","detail":"{range_begin:/registry/services/endpoints/kube-system/k8s.io-minikube-hostpath; range_end:; response_count:1; response_revision:36886; }","duration":"161.738958ms","start":"2022-08-14T11:15:27.202Z","end":"2022-08-14T11:15:27.363Z","steps":["trace[782150132] 'agreement among raft nodes before linearized reading'  (duration: 160.452ms)"],"step_count":1}
+{"level":"info","ts":"2022-08-14T11:17:11.074Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":36736}
+{"level":"info","ts":"2022-08-14T11:17:11.074Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":36736,"took":"418.792µs"}
+{"level":"info","ts":"2022-08-14T11:22:11.075Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":36945}
+{"level":"info","ts":"2022-08-14T11:22:11.076Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":36945,"took":"425.166µs"}
+{"level":"info","ts":"2022-08-14T11:27:11.076Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":37156}
+{"level":"info","ts":"2022-08-14T11:27:11.077Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":37156,"took":"525.25µs"}
+{"level":"info","ts":"2022-08-14T11:32:11.079Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":37365}
+{"level":"info","ts":"2022-08-14T11:32:11.079Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":37365,"took":"260.166µs"}
+{"level":"info","ts":"2022-08-14T14:25:19.975Z","caller":"traceutil/trace.go:171","msg":"trace[2040065387] transaction","detail":"{read_only:false; response_revision:37731; number_of_response:1; }","duration":"122.035042ms","start":"2022-08-14T14:25:19.853Z","end":"2022-08-14T14:25:19.975Z","steps":["trace[2040065387] 'process raft request'  (duration: 121.399459ms)"],"step_count":1}
+{"level":"info","ts":"2022-08-14T14:25:19.975Z","caller":"traceutil/trace.go:171","msg":"trace[1784617029] linearizableReadLoop","detail":"{readStateIndex:48495; appliedIndex:48494; }","duration":"115.391417ms","start":"2022-08-14T14:25:19.860Z","end":"2022-08-14T14:25:19.975Z","steps":["trace[1784617029] 'read index received'  (duration: 114.535375ms)","trace[1784617029] 'applied index is now lower than readState.Index'  (duration: 855.25µs)"],"step_count":2}
+{"level":"warn","ts":"2022-08-14T14:25:19.976Z","caller":"etcdserver/util.go:166","msg":"apply request took too long","took":"115.835542ms","expected-duration":"100ms","prefix":"read-only range ","request":"key:\"/registry/services/endpoints/kube-system/k8s.io-minikube-hostpath\" ","response":"range_response_count:1 size:606"}
+{"level":"info","ts":"2022-08-14T14:25:19.976Z","caller":"traceutil/trace.go:171","msg":"trace[1807262199] range","detail":"{range_begin:/registry/services/endpoints/kube-system/k8s.io-minikube-hostpath; range_end:; response_count:1; response_revision:37732; }","duration":"116.142542ms","start":"2022-08-14T14:25:19.859Z","end":"2022-08-14T14:25:19.976Z","steps":["trace[1807262199] 'agreement among raft nodes before linearized reading'  (duration: 115.614126ms)"],"step_count":1}
+{"level":"info","ts":"2022-08-14T17:27:41.618Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":37575}
+{"level":"info","ts":"2022-08-14T17:27:41.619Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":37575,"took":"463.75µs"}
+{"level":"info","ts":"2022-08-14T17:29:45.029Z","caller":"traceutil/trace.go:171","msg":"trace[1919715430] linearizableReadLoop","detail":"{readStateIndex:48636; appliedIndex:48636; }","duration":"147.111875ms","start":"2022-08-14T17:29:44.882Z","end":"2022-08-14T17:29:45.029Z","steps":["trace[1919715430] 'read index received'  (duration: 147.102917ms)","trace[1919715430] 'applied index is now lower than readState.Index'  (duration: 7.625µs)"],"step_count":2}
+{"level":"warn","ts":"2022-08-14T17:29:45.030Z","caller":"etcdserver/util.go:166","msg":"apply request took too long","took":"147.80725ms","expected-duration":"100ms","prefix":"read-only range ","request":"limit:1 keys_only:true ","response":"range_response_count:0 size:6"}
+{"level":"info","ts":"2022-08-14T17:29:45.030Z","caller":"traceutil/trace.go:171","msg":"trace[1524778092] range","detail":"{range_begin:; range_end:; response_count:0; response_revision:37840; }","duration":"147.899542ms","start":"2022-08-14T17:29:44.882Z","end":"2022-08-14T17:29:45.030Z","steps":["trace[1524778092] 'agreement among raft nodes before linearized reading'  (duration: 147.298375ms)"],"step_count":1}
+{"level":"warn","ts":"2022-08-14T17:29:45.030Z","caller":"etcdserver/util.go:166","msg":"apply request took too long","took":"110.511375ms","expected-duration":"100ms","prefix":"read-only range ","request":"key:\"/registry/roles/\" range_end:\"/registry/roles0\" count_only:true ","response":"range_response_count:0 size:8"}
+{"level":"info","ts":"2022-08-14T17:29:45.030Z","caller":"traceutil/trace.go:171","msg":"trace[2053188347] range","detail":"{range_begin:/registry/roles/; range_end:/registry/roles0; response_count:0; response_revision:37840; }","duration":"110.671083ms","start":"2022-08-14T17:29:44.919Z","end":"2022-08-14T17:29:45.030Z","steps":["trace[2053188347] 'agreement among raft nodes before linearized reading'  (duration: 110.042958ms)"],"step_count":1}
+{"level":"info","ts":"2022-08-14T21:20:52.804Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":37784}
+{"level":"info","ts":"2022-08-14T21:20:52.805Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":37784,"took":"733.541µs"}
+{"level":"info","ts":"2022-08-14T22:30:40.128Z","caller":"traceutil/trace.go:171","msg":"trace[385082459] transaction","detail":"{read_only:false; response_revision:38117; number_of_response:1; }","duration":"103.252459ms","start":"2022-08-14T22:30:40.025Z","end":"2022-08-14T22:30:40.128Z","steps":["trace[385082459] 'process raft request'  (duration: 103.04825ms)"],"step_count":1}
+{"level":"info","ts":"2022-08-15T04:12:35.312Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":37993}
+{"level":"info","ts":"2022-08-15T04:12:35.312Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":37993,"took":"482µs"}
+{"level":"info","ts":"2022-08-15T05:55:23.150Z","caller":"traceutil/trace.go:171","msg":"trace[1606776755] linearizableReadLoop","detail":"{readStateIndex:49141; appliedIndex:49141; }","duration":"140.454458ms","start":"2022-08-15T05:55:23.009Z","end":"2022-08-15T05:55:23.150Z","steps":["trace[1606776755] 'read index received'  (duration: 140.445291ms)","trace[1606776755] 'applied index is now lower than readState.Index'  (duration: 8.125µs)"],"step_count":2}
+{"level":"info","ts":"2022-08-15T05:55:23.152Z","caller":"traceutil/trace.go:171","msg":"trace[1774474138] transaction","detail":"{read_only:false; response_revision:38232; number_of_response:1; }","duration":"139.962959ms","start":"2022-08-15T05:55:23.012Z","end":"2022-08-15T05:55:23.152Z","steps":["trace[1774474138] 'process raft request'  (duration: 137.869875ms)"],"step_count":1}
+{"level":"warn","ts":"2022-08-15T05:55:23.152Z","caller":"etcdserver/util.go:166","msg":"apply request took too long","took":"142.325542ms","expected-duration":"100ms","prefix":"read-only range ","request":"key:\"/registry/services/endpoints/kube-system/k8s.io-minikube-hostpath\" ","response":"range_response_count:1 size:606"}
+{"level":"info","ts":"2022-08-15T05:55:23.152Z","caller":"traceutil/trace.go:171","msg":"trace[733775583] range","detail":"{range_begin:/registry/services/endpoints/kube-system/k8s.io-minikube-hostpath; range_end:; response_count:1; response_revision:38231; }","duration":"142.878292ms","start":"2022-08-15T05:55:23.009Z","end":"2022-08-15T05:55:23.152Z","steps":["trace[733775583] 'agreement among raft nodes before linearized reading'  (duration: 140.744875ms)"],"step_count":1}
+{"level":"warn","ts":"2022-08-15T05:55:23.152Z","caller":"etcdserver/util.go:166","msg":"apply request took too long","took":"141.66525ms","expected-duration":"100ms","prefix":"read-only range ","request":"key:\"/registry/csidrivers/\" range_end:\"/registry/csidrivers0\" count_only:true ","response":"range_response_count:0 size:6"}
+{"level":"info","ts":"2022-08-15T05:55:23.152Z","caller":"traceutil/trace.go:171","msg":"trace[1720436555] range","detail":"{range_begin:/registry/csidrivers/; range_end:/registry/csidrivers0; response_count:0; response_revision:38232; }","duration":"142.089708ms","start":"2022-08-15T05:55:23.010Z","end":"2022-08-15T05:55:23.152Z","steps":["trace[1720436555] 'agreement among raft nodes before linearized reading'  (duration: 141.601833ms)"],"step_count":1}
+{"level":"warn","ts":"2022-08-15T05:55:23.152Z","caller":"etcdserver/util.go:166","msg":"apply request took too long","took":"141.28325ms","expected-duration":"100ms","prefix":"read-only range ","request":"key:\"/registry/health\" ","response":"range_response_count:0 size:6"}
+{"level":"info","ts":"2022-08-15T05:55:23.153Z","caller":"traceutil/trace.go:171","msg":"trace[15306028] range","detail":"{range_begin:/registry/health; range_end:; response_count:0; response_revision:38232; }","duration":"142.00475ms","start":"2022-08-15T05:55:23.011Z","end":"2022-08-15T05:55:23.153Z","steps":["trace[15306028] 'agreement among raft nodes before linearized reading'  (duration: 141.275292ms)"],"step_count":1}
+{"level":"info","ts":"2022-08-15T06:41:18.731Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":38203}
+{"level":"info","ts":"2022-08-15T06:41:18.732Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":38203,"took":"453.5µs"}
+{"level":"info","ts":"2022-08-15T06:46:18.734Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":38413}
+{"level":"info","ts":"2022-08-15T06:46:18.734Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":38413,"took":"299.208µs"}
+{"level":"info","ts":"2022-08-15T06:51:18.736Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":38623}
+{"level":"info","ts":"2022-08-15T06:51:18.737Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":38623,"took":"651.791µs"}
+{"level":"info","ts":"2022-08-15T06:52:55.924Z","caller":"etcdserver/server.go:1383","msg":"triggering snapshot","local-member-id":"aec36adc501070cc","local-member-applied-index":50005,"local-member-snapshot-index":40004,"local-member-snapshot-count":10000}
+{"level":"info","ts":"2022-08-15T06:52:55.931Z","caller":"etcdserver/server.go:2394","msg":"saved snapshot","snapshot-index":50005}
+{"level":"info","ts":"2022-08-15T06:52:55.932Z","caller":"etcdserver/server.go:2424","msg":"compacted Raft logs","compact-index":45005}
+{"level":"info","ts":"2022-08-15T06:56:18.739Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":38832}
+{"level":"info","ts":"2022-08-15T06:56:18.740Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":38832,"took":"414.333µs"}
+{"level":"info","ts":"2022-08-15T07:01:18.746Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":39043}
+{"level":"info","ts":"2022-08-15T07:01:18.747Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":39043,"took":"482.5µs"}
+{"level":"info","ts":"2022-08-15T07:06:18.753Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":39252}
+{"level":"info","ts":"2022-08-15T07:06:18.754Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":39252,"took":"397.541µs"}
+{"level":"info","ts":"2022-08-15T07:11:18.456Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":39463}
+{"level":"info","ts":"2022-08-15T07:11:18.456Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":39463,"took":"246.292µs"}
+{"level":"info","ts":"2022-08-15T07:16:18.453Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":39673}
+{"level":"info","ts":"2022-08-15T07:16:18.454Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":39673,"took":"395.833µs"}
+{"level":"info","ts":"2022-08-15T07:21:18.457Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":39967}
+{"level":"info","ts":"2022-08-15T07:21:18.459Z","caller":"mvcc/kvstore_compaction.go:57","msg":"finished scheduled compaction","compact-revision":39967,"took":"662.917µs"}
+
+* 
+* ==> kernel <==
+*  07:21:47 up 16:39,  0 users,  load average: 0.00, 0.14, 0.23
+Linux minikube 5.10.104-linuxkit #1 SMP PREEMPT Thu Mar 17 17:05:54 UTC 2022 aarch64 aarch64 aarch64 GNU/Linux
+PRETTY_NAME="Ubuntu 20.04.4 LTS"
+
+* 
+* ==> kube-apiserver [cc4fa7cfd51c] <==
+* E0813 10:24:29.198162       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+W0813 10:25:40.439359       1 watcher.go:229] watch chan error: etcdserver: mvcc: required revision has been compacted
+W0813 10:37:17.992685       1 watcher.go:229] watch chan error: etcdserver: mvcc: required revision has been compacted
+W0813 10:52:24.906940       1 watcher.go:229] watch chan error: etcdserver: mvcc: required revision has been compacted
+W0813 11:10:04.621839       1 watcher.go:229] watch chan error: etcdserver: mvcc: required revision has been compacted
+W0813 11:22:00.631913       1 watcher.go:229] watch chan error: etcdserver: mvcc: required revision has been compacted
+I0813 11:36:26.912798       1 alloc.go:327] "allocated clusterIPs" service="default/mongodb-service" clusterIPs=map[IPv4:10.99.23.84]
+I0813 11:43:56.357562       1 alloc.go:327] "allocated clusterIPs" service="default/mongodb-service" clusterIPs=map[IPv4:10.99.40.128]
+I0813 12:00:59.387753       1 alloc.go:327] "allocated clusterIPs" service="default/mongodb-service" clusterIPs=map[IPv4:10.111.252.166]
+E0813 14:41:17.220161       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0813 14:41:17.220329       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+I0813 15:29:00.348004       1 alloc.go:327] "allocated clusterIPs" service="default/mongodb-service" clusterIPs=map[IPv4:10.103.3.8]
+I0813 15:43:00.729074       1 alloc.go:327] "allocated clusterIPs" service="default/mongodb-service" clusterIPs=map[IPv4:10.100.202.142]
+W0813 16:10:59.897103       1 watcher.go:229] watch chan error: etcdserver: mvcc: required revision has been compacted
+E0813 17:21:47.970616       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0813 17:21:47.972096       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0813 19:51:02.982710       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0813 19:51:02.982735       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+W0813 21:07:16.339149       1 watcher.go:229] watch chan error: etcdserver: mvcc: required revision has been compacted
+I0813 21:27:42.224740       1 alloc.go:327] "allocated clusterIPs" service="default/mongo-express-service" clusterIPs=map[IPv4:10.103.9.135]
+E0813 22:56:32.204950       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0813 22:56:32.208004       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0814 01:25:29.297898       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0814 01:25:29.298800       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+W0814 01:25:54.697150       1 watcher.go:229] watch chan error: etcdserver: mvcc: required revision has been compacted
+E0814 04:11:07.835759       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0814 04:11:07.835823       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0814 06:56:39.116465       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0814 06:56:39.116846       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0814 08:05:20.694449       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0814 08:05:20.694514       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+W0814 09:24:26.447347       1 watcher.go:229] watch chan error: etcdserver: mvcc: required revision has been compacted
+W0814 09:40:05.459916       1 watcher.go:229] watch chan error: etcdserver: mvcc: required revision has been compacted
+E0814 11:09:49.227363       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0814 11:09:49.227360       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+W0814 11:13:21.443201       1 watcher.go:229] watch chan error: etcdserver: mvcc: required revision has been compacted
+W0814 11:27:11.477133       1 watcher.go:229] watch chan error: etcdserver: mvcc: required revision has been compacted
+E0814 13:30:20.496195       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0814 13:30:20.496228       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0814 15:30:03.609975       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0814 15:30:03.610019       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0814 18:36:19.485503       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0814 18:36:19.485503       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0814 21:18:21.955518       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0814 21:18:21.955683       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+W0814 21:20:48.492644       1 watcher.go:229] watch chan error: etcdserver: mvcc: required revision has been compacted
+E0814 22:30:42.783147       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0814 22:30:42.783216       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0815 01:08:02.331652       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0815 01:08:02.332303       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0815 04:12:34.875127       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0815 04:12:34.875308       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+W0815 06:39:37.564091       1 watcher.go:229] watch chan error: etcdserver: mvcc: required revision has been compacted
+W0815 06:47:36.153745       1 watcher.go:229] watch chan error: etcdserver: mvcc: required revision has been compacted
+E0815 06:56:19.198844       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0815 06:56:19.198916       1 authentication.go:63] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+W0815 07:02:57.775535       1 watcher.go:229] watch chan error: etcdserver: mvcc: required revision has been compacted
+I0815 07:13:41.214932       1 alloc.go:327] "allocated clusterIPs" service="ingress-nginx/ingress-nginx-controller" clusterIPs=map[IPv4:10.105.7.202]
+I0815 07:13:41.224049       1 alloc.go:327] "allocated clusterIPs" service="ingress-nginx/ingress-nginx-controller-admission" clusterIPs=map[IPv4:10.106.71.39]
+I0815 07:13:41.236155       1 controller.go:611] quota admission added evaluator for: jobs.batch
+
+* 
+* ==> kube-controller-manager [f0ac7a45ae0c] <==
+* I0813 15:29:00.349922       1 event.go:294] "Event occurred" object="default/mongodb" fieldPath="" kind="Deployment" apiVersion="apps/v1" type="Normal" reason="ScalingReplicaSet" message="Scaled up replica set mongodb-6bd498684c to 1"
+I0813 15:29:00.364353       1 event.go:294] "Event occurred" object="default/mongodb-6bd498684c" fieldPath="" kind="ReplicaSet" apiVersion="apps/v1" type="Normal" reason="SuccessfulCreate" message="Created pod: mongodb-6bd498684c-9vvwx"
+I0813 15:43:00.733493       1 event.go:294] "Event occurred" object="default/mongodb-deployment" fieldPath="" kind="Deployment" apiVersion="apps/v1" type="Normal" reason="ScalingReplicaSet" message="Scaled up replica set mongodb-deployment-67dcfb9c9f to 1"
+I0813 15:43:00.739807       1 event.go:294] "Event occurred" object="default/mongodb-deployment-67dcfb9c9f" fieldPath="" kind="ReplicaSet" apiVersion="apps/v1" type="Normal" reason="SuccessfulCreate" message="Created pod: mongodb-deployment-67dcfb9c9f-cs6sn"
+W0813 17:21:47.974384       1 garbagecollector.go:749] failed to discover preferred resources: Unauthorized
+E0813 17:21:47.974432       1 resource_quota_controller.go:413] failed to discover resources: Unauthorized
+E0813 19:51:02.983286       1 resource_quota_controller.go:413] failed to discover resources: Unauthorized
+W0813 19:51:02.983332       1 garbagecollector.go:749] failed to discover preferred resources: Unauthorized
+I0813 21:20:05.114173       1 event.go:294] "Event occurred" object="default/mongo-express-deployment" fieldPath="" kind="Deployment" apiVersion="apps/v1" type="Normal" reason="ScalingReplicaSet" message="Scaled up replica set mongo-express-deployment-98c6ff4b4 to 1"
+I0813 21:20:05.124421       1 event.go:294] "Event occurred" object="default/mongo-express-deployment-98c6ff4b4" fieldPath="" kind="ReplicaSet" apiVersion="apps/v1" type="Normal" reason="SuccessfulCreate" message="Created pod: mongo-express-deployment-98c6ff4b4-7v8kt"
+W0813 22:56:32.208925       1 garbagecollector.go:749] failed to discover preferred resources: Unauthorized
+E0813 22:56:32.209195       1 resource_quota_controller.go:413] failed to discover resources: Unauthorized
+E0814 01:25:29.299593       1 resource_quota_controller.go:413] failed to discover resources: Unauthorized
+W0814 01:25:29.299592       1 garbagecollector.go:749] failed to discover preferred resources: Unauthorized
+E0814 04:11:07.836268       1 resource_quota_controller.go:413] failed to discover resources: Unauthorized
+W0814 04:11:07.836277       1 garbagecollector.go:749] failed to discover preferred resources: Unauthorized
+W0814 06:56:39.117062       1 garbagecollector.go:749] failed to discover preferred resources: Unauthorized
+E0814 06:56:39.117228       1 resource_quota_controller.go:413] failed to discover resources: Unauthorized
+W0814 08:05:20.695551       1 garbagecollector.go:749] failed to discover preferred resources: Unauthorized
+E0814 08:05:20.695561       1 resource_quota_controller.go:413] failed to discover resources: Unauthorized
+E0814 11:09:49.228727       1 resource_quota_controller.go:413] failed to discover resources: Unauthorized
+W0814 11:09:49.228727       1 garbagecollector.go:749] failed to discover preferred resources: Unauthorized
+E0814 13:30:20.496806       1 resource_quota_controller.go:413] failed to discover resources: Unauthorized
+W0814 13:30:20.496866       1 garbagecollector.go:749] failed to discover preferred resources: Unauthorized
+W0814 15:30:03.610376       1 garbagecollector.go:749] failed to discover preferred resources: Unauthorized
+E0814 15:30:03.610380       1 resource_quota_controller.go:413] failed to discover resources: Unauthorized
+W0814 18:36:19.487358       1 garbagecollector.go:749] failed to discover preferred resources: Unauthorized
+E0814 18:36:19.487369       1 resource_quota_controller.go:413] failed to discover resources: Unauthorized
+W0814 21:18:21.956559       1 garbagecollector.go:749] failed to discover preferred resources: Unauthorized
+E0814 21:18:21.956696       1 resource_quota_controller.go:413] failed to discover resources: Unauthorized
+W0814 22:30:42.784476       1 garbagecollector.go:749] failed to discover preferred resources: Unauthorized
+E0814 22:30:42.784506       1 resource_quota_controller.go:413] failed to discover resources: Unauthorized
+W0815 01:08:02.334546       1 garbagecollector.go:749] failed to discover preferred resources: Unauthorized
+E0815 01:08:02.334455       1 resource_quota_controller.go:413] failed to discover resources: Unauthorized
+E0815 04:12:34.876464       1 resource_quota_controller.go:413] failed to discover resources: Unauthorized
+W0815 04:12:34.876492       1 garbagecollector.go:749] failed to discover preferred resources: Unauthorized
+W0815 06:56:19.199377       1 garbagecollector.go:749] failed to discover preferred resources: Unauthorized
+E0815 06:56:19.199420       1 resource_quota_controller.go:413] failed to discover resources: Unauthorized
+I0815 07:13:41.237456       1 job_controller.go:498] enqueueing job ingress-nginx/ingress-nginx-admission-create
+I0815 07:13:41.279867       1 event.go:294] "Event occurred" object="ingress-nginx/ingress-nginx-controller" fieldPath="" kind="Deployment" apiVersion="apps/v1" type="Normal" reason="ScalingReplicaSet" message="Scaled up replica set ingress-nginx-controller-755dfbfc65 to 1"
+I0815 07:13:41.283255       1 job_controller.go:498] enqueueing job ingress-nginx/ingress-nginx-admission-patch
+I0815 07:13:41.293879       1 event.go:294] "Event occurred" object="ingress-nginx/ingress-nginx-admission-patch" fieldPath="" kind="Job" apiVersion="batch/v1" type="Normal" reason="SuccessfulCreate" message="Created pod: ingress-nginx-admission-patch-gthjr"
+I0815 07:13:41.293965       1 event.go:294] "Event occurred" object="ingress-nginx/ingress-nginx-admission-create" fieldPath="" kind="Job" apiVersion="batch/v1" type="Normal" reason="SuccessfulCreate" message="Created pod: ingress-nginx-admission-create-nhhzc"
+I0815 07:13:41.294389       1 job_controller.go:498] enqueueing job ingress-nginx/ingress-nginx-admission-create
+I0815 07:13:41.294486       1 job_controller.go:498] enqueueing job ingress-nginx/ingress-nginx-admission-patch
+I0815 07:13:41.298007       1 job_controller.go:498] enqueueing job ingress-nginx/ingress-nginx-admission-create
+I0815 07:13:41.299009       1 job_controller.go:498] enqueueing job ingress-nginx/ingress-nginx-admission-patch
+I0815 07:13:41.299289       1 job_controller.go:498] enqueueing job ingress-nginx/ingress-nginx-admission-create
+I0815 07:13:41.300217       1 job_controller.go:498] enqueueing job ingress-nginx/ingress-nginx-admission-patch
+I0815 07:13:41.309955       1 event.go:294] "Event occurred" object="ingress-nginx/ingress-nginx-controller-755dfbfc65" fieldPath="" kind="ReplicaSet" apiVersion="apps/v1" type="Normal" reason="SuccessfulCreate" message="Created pod: ingress-nginx-controller-755dfbfc65-sfbsw"
+I0815 07:13:41.380711       1 job_controller.go:498] enqueueing job ingress-nginx/ingress-nginx-admission-create
+I0815 07:13:41.437105       1 job_controller.go:498] enqueueing job ingress-nginx/ingress-nginx-admission-patch
+I0815 07:15:09.891752       1 job_controller.go:498] enqueueing job ingress-nginx/ingress-nginx-admission-patch
+I0815 07:15:09.895684       1 job_controller.go:498] enqueueing job ingress-nginx/ingress-nginx-admission-create
+I0815 07:15:11.190550       1 job_controller.go:498] enqueueing job ingress-nginx/ingress-nginx-admission-create
+I0815 07:15:11.195407       1 job_controller.go:498] enqueueing job ingress-nginx/ingress-nginx-admission-patch
+I0815 07:15:12.191697       1 event.go:294] "Event occurred" object="ingress-nginx/ingress-nginx-admission-create" fieldPath="" kind="Job" apiVersion="batch/v1" type="Normal" reason="Completed" message="Job completed"
+I0815 07:15:12.196599       1 event.go:294] "Event occurred" object="ingress-nginx/ingress-nginx-admission-patch" fieldPath="" kind="Job" apiVersion="batch/v1" type="Normal" reason="Completed" message="Job completed"
+I0815 07:15:12.210123       1 job_controller.go:498] enqueueing job ingress-nginx/ingress-nginx-admission-create
+I0815 07:15:12.211686       1 job_controller.go:498] enqueueing job ingress-nginx/ingress-nginx-admission-patch
+
+* 
+* ==> kube-proxy [a8cc8f594b70] <==
+* I0811 23:18:51.320081       1 node.go:163] Successfully retrieved node IP: 192.168.49.2
+I0811 23:18:51.320137       1 server_others.go:138] "Detected node IP" address="192.168.49.2"
+I0811 23:18:51.320158       1 server_others.go:578] "Unknown proxy mode, assuming iptables proxy" proxyMode=""
+I0811 23:18:51.369081       1 server_others.go:206] "Using iptables Proxier"
+I0811 23:18:51.369106       1 server_others.go:213] "kube-proxy running in dual-stack mode" ipFamily=IPv4
+I0811 23:18:51.369246       1 server_others.go:214] "Creating dualStackProxier for iptables"
+I0811 23:18:51.369261       1 server_others.go:501] "Detect-local-mode set to ClusterCIDR, but no IPv6 cluster CIDR defined, , defaulting to no-op detect-local for IPv6"
+I0811 23:18:51.369280       1 proxier.go:259] "Setting route_localnet=1, use nodePortAddresses to filter loopback addresses for NodePorts to skip it https://issues.k8s.io/90259"
+I0811 23:18:51.369365       1 proxier.go:259] "Setting route_localnet=1, use nodePortAddresses to filter loopback addresses for NodePorts to skip it https://issues.k8s.io/90259"
+I0811 23:18:51.369478       1 server.go:661] "Version info" version="v1.24.3"
+I0811 23:18:51.369482       1 server.go:663] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+I0811 23:18:51.370375       1 config.go:444] "Starting node config controller"
+I0811 23:18:51.370381       1 shared_informer.go:255] Waiting for caches to sync for node config
+I0811 23:18:51.370406       1 config.go:317] "Starting service config controller"
+I0811 23:18:51.370411       1 shared_informer.go:255] Waiting for caches to sync for service config
+I0811 23:18:51.370421       1 config.go:226] "Starting endpoint slice config controller"
+I0811 23:18:51.370423       1 shared_informer.go:255] Waiting for caches to sync for endpoint slice config
+I0811 23:18:51.470997       1 shared_informer.go:262] Caches are synced for endpoint slice config
+I0811 23:18:51.471042       1 shared_informer.go:262] Caches are synced for service config
+I0811 23:18:51.471112       1 shared_informer.go:262] Caches are synced for node config
+
+* 
+* ==> kube-scheduler [a2812e1d68f0] <==
+* W0811 23:18:34.547468       1 authentication.go:348] To require authentication configuration lookup to succeed, set --authentication-tolerate-lookup-failure=false
+I0811 23:18:34.557977       1 server.go:147] "Starting Kubernetes Scheduler" version="v1.24.3"
+I0811 23:18:34.558099       1 server.go:149] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+I0811 23:18:34.558884       1 secure_serving.go:210] Serving securely on 127.0.0.1:10259
+I0811 23:18:34.558949       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I0811 23:18:34.558954       1 shared_informer.go:255] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I0811 23:18:34.558964       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+W0811 23:18:34.560065       1 reflector.go:324] pkg/server/dynamiccertificates/configmap_cafile_content.go:206: failed to list *v1.ConfigMap: configmaps "extension-apiserver-authentication" is forbidden: User "system:kube-scheduler" cannot list resource "configmaps" in API group "" in the namespace "kube-system"
+E0811 23:18:34.560168       1 reflector.go:138] pkg/server/dynamiccertificates/configmap_cafile_content.go:206: Failed to watch *v1.ConfigMap: failed to list *v1.ConfigMap: configmaps "extension-apiserver-authentication" is forbidden: User "system:kube-scheduler" cannot list resource "configmaps" in API group "" in the namespace "kube-system"
+W0811 23:18:34.561985       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.StorageClass: storageclasses.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "storageclasses" in API group "storage.k8s.io" at the cluster scope
+E0811 23:18:34.562084       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.StorageClass: failed to list *v1.StorageClass: storageclasses.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "storageclasses" in API group "storage.k8s.io" at the cluster scope
+W0811 23:18:34.562125       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.ReplicaSet: replicasets.apps is forbidden: User "system:kube-scheduler" cannot list resource "replicasets" in API group "apps" at the cluster scope
+E0811 23:18:34.562134       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.ReplicaSet: failed to list *v1.ReplicaSet: replicasets.apps is forbidden: User "system:kube-scheduler" cannot list resource "replicasets" in API group "apps" at the cluster scope
+W0811 23:18:34.562150       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.StatefulSet: statefulsets.apps is forbidden: User "system:kube-scheduler" cannot list resource "statefulsets" in API group "apps" at the cluster scope
+E0811 23:18:34.562158       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.StatefulSet: failed to list *v1.StatefulSet: statefulsets.apps is forbidden: User "system:kube-scheduler" cannot list resource "statefulsets" in API group "apps" at the cluster scope
+W0811 23:18:34.562174       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.Pod: pods is forbidden: User "system:kube-scheduler" cannot list resource "pods" in API group "" at the cluster scope
+E0811 23:18:34.562235       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.Pod: failed to list *v1.Pod: pods is forbidden: User "system:kube-scheduler" cannot list resource "pods" in API group "" at the cluster scope
+W0811 23:18:34.562201       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.Service: services is forbidden: User "system:kube-scheduler" cannot list resource "services" in API group "" at the cluster scope
+E0811 23:18:34.562246       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.Service: failed to list *v1.Service: services is forbidden: User "system:kube-scheduler" cannot list resource "services" in API group "" at the cluster scope
+W0811 23:18:34.562223       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.PersistentVolumeClaim: persistentvolumeclaims is forbidden: User "system:kube-scheduler" cannot list resource "persistentvolumeclaims" in API group "" at the cluster scope
+E0811 23:18:34.562253       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.PersistentVolumeClaim: failed to list *v1.PersistentVolumeClaim: persistentvolumeclaims is forbidden: User "system:kube-scheduler" cannot list resource "persistentvolumeclaims" in API group "" at the cluster scope
+W0811 23:18:34.562299       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.CSINode: csinodes.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csinodes" in API group "storage.k8s.io" at the cluster scope
+E0811 23:18:34.562319       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.CSINode: failed to list *v1.CSINode: csinodes.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csinodes" in API group "storage.k8s.io" at the cluster scope
+W0811 23:18:34.562342       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.CSIDriver: csidrivers.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csidrivers" in API group "storage.k8s.io" at the cluster scope
+E0811 23:18:34.562357       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.CSIDriver: failed to list *v1.CSIDriver: csidrivers.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csidrivers" in API group "storage.k8s.io" at the cluster scope
+W0811 23:18:34.562350       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.Node: nodes is forbidden: User "system:kube-scheduler" cannot list resource "nodes" in API group "" at the cluster scope
+E0811 23:18:34.562381       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.Node: failed to list *v1.Node: nodes is forbidden: User "system:kube-scheduler" cannot list resource "nodes" in API group "" at the cluster scope
+W0811 23:18:34.562458       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.CSIStorageCapacity: csistoragecapacities.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csistoragecapacities" in API group "storage.k8s.io" at the cluster scope
+E0811 23:18:34.562480       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.CSIStorageCapacity: failed to list *v1.CSIStorageCapacity: csistoragecapacities.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csistoragecapacities" in API group "storage.k8s.io" at the cluster scope
+W0811 23:18:34.562382       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.ReplicationController: replicationcontrollers is forbidden: User "system:kube-scheduler" cannot list resource "replicationcontrollers" in API group "" at the cluster scope
+E0811 23:18:34.562490       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.ReplicationController: failed to list *v1.ReplicationController: replicationcontrollers is forbidden: User "system:kube-scheduler" cannot list resource "replicationcontrollers" in API group "" at the cluster scope
+W0811 23:18:34.562418       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.Namespace: namespaces is forbidden: User "system:kube-scheduler" cannot list resource "namespaces" in API group "" at the cluster scope
+E0811 23:18:34.562497       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.Namespace: failed to list *v1.Namespace: namespaces is forbidden: User "system:kube-scheduler" cannot list resource "namespaces" in API group "" at the cluster scope
+W0811 23:18:34.562435       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.PersistentVolume: persistentvolumes is forbidden: User "system:kube-scheduler" cannot list resource "persistentvolumes" in API group "" at the cluster scope
+E0811 23:18:34.562503       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.PersistentVolume: failed to list *v1.PersistentVolume: persistentvolumes is forbidden: User "system:kube-scheduler" cannot list resource "persistentvolumes" in API group "" at the cluster scope
+W0811 23:18:34.563074       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.PodDisruptionBudget: poddisruptionbudgets.policy is forbidden: User "system:kube-scheduler" cannot list resource "poddisruptionbudgets" in API group "policy" at the cluster scope
+E0811 23:18:34.563159       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.PodDisruptionBudget: failed to list *v1.PodDisruptionBudget: poddisruptionbudgets.policy is forbidden: User "system:kube-scheduler" cannot list resource "poddisruptionbudgets" in API group "policy" at the cluster scope
+W0811 23:18:35.493770       1 reflector.go:324] pkg/server/dynamiccertificates/configmap_cafile_content.go:206: failed to list *v1.ConfigMap: configmaps "extension-apiserver-authentication" is forbidden: User "system:kube-scheduler" cannot list resource "configmaps" in API group "" in the namespace "kube-system"
+E0811 23:18:35.493856       1 reflector.go:138] pkg/server/dynamiccertificates/configmap_cafile_content.go:206: Failed to watch *v1.ConfigMap: failed to list *v1.ConfigMap: configmaps "extension-apiserver-authentication" is forbidden: User "system:kube-scheduler" cannot list resource "configmaps" in API group "" in the namespace "kube-system"
+W0811 23:18:35.514325       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.ReplicaSet: replicasets.apps is forbidden: User "system:kube-scheduler" cannot list resource "replicasets" in API group "apps" at the cluster scope
+E0811 23:18:35.514379       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.ReplicaSet: failed to list *v1.ReplicaSet: replicasets.apps is forbidden: User "system:kube-scheduler" cannot list resource "replicasets" in API group "apps" at the cluster scope
+W0811 23:18:35.542279       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.PodDisruptionBudget: poddisruptionbudgets.policy is forbidden: User "system:kube-scheduler" cannot list resource "poddisruptionbudgets" in API group "policy" at the cluster scope
+E0811 23:18:35.542314       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.PodDisruptionBudget: failed to list *v1.PodDisruptionBudget: poddisruptionbudgets.policy is forbidden: User "system:kube-scheduler" cannot list resource "poddisruptionbudgets" in API group "policy" at the cluster scope
+W0811 23:18:35.555816       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.PersistentVolumeClaim: persistentvolumeclaims is forbidden: User "system:kube-scheduler" cannot list resource "persistentvolumeclaims" in API group "" at the cluster scope
+E0811 23:18:35.555914       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.PersistentVolumeClaim: failed to list *v1.PersistentVolumeClaim: persistentvolumeclaims is forbidden: User "system:kube-scheduler" cannot list resource "persistentvolumeclaims" in API group "" at the cluster scope
+W0811 23:18:35.578228       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.ReplicationController: replicationcontrollers is forbidden: User "system:kube-scheduler" cannot list resource "replicationcontrollers" in API group "" at the cluster scope
+E0811 23:18:35.578251       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.ReplicationController: failed to list *v1.ReplicationController: replicationcontrollers is forbidden: User "system:kube-scheduler" cannot list resource "replicationcontrollers" in API group "" at the cluster scope
+W0811 23:18:35.675686       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.Service: services is forbidden: User "system:kube-scheduler" cannot list resource "services" in API group "" at the cluster scope
+E0811 23:18:35.675714       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.Service: failed to list *v1.Service: services is forbidden: User "system:kube-scheduler" cannot list resource "services" in API group "" at the cluster scope
+W0811 23:18:35.688303       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.Node: nodes is forbidden: User "system:kube-scheduler" cannot list resource "nodes" in API group "" at the cluster scope
+E0811 23:18:35.688331       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.Node: failed to list *v1.Node: nodes is forbidden: User "system:kube-scheduler" cannot list resource "nodes" in API group "" at the cluster scope
+W0811 23:18:35.720345       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.CSIDriver: csidrivers.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csidrivers" in API group "storage.k8s.io" at the cluster scope
+E0811 23:18:35.720393       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.CSIDriver: failed to list *v1.CSIDriver: csidrivers.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "csidrivers" in API group "storage.k8s.io" at the cluster scope
+W0811 23:18:35.726528       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.StorageClass: storageclasses.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "storageclasses" in API group "storage.k8s.io" at the cluster scope
+E0811 23:18:35.726588       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.StorageClass: failed to list *v1.StorageClass: storageclasses.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "storageclasses" in API group "storage.k8s.io" at the cluster scope
+W0811 23:18:35.728146       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.StatefulSet: statefulsets.apps is forbidden: User "system:kube-scheduler" cannot list resource "statefulsets" in API group "apps" at the cluster scope
+E0811 23:18:35.728168       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.StatefulSet: failed to list *v1.StatefulSet: statefulsets.apps is forbidden: User "system:kube-scheduler" cannot list resource "statefulsets" in API group "apps" at the cluster scope
+W0811 23:18:35.756548       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.Pod: pods is forbidden: User "system:kube-scheduler" cannot list resource "pods" in API group "" at the cluster scope
+E0811 23:18:35.756569       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.Pod: failed to list *v1.Pod: pods is forbidden: User "system:kube-scheduler" cannot list resource "pods" in API group "" at the cluster scope
+I0811 23:18:37.859051       1 shared_informer.go:262] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+
+* 
+* ==> kubelet <==
+* -- Logs begin at Thu 2022-08-11 23:18:18 UTC, end at Mon 2022-08-15 07:21:47 UTC. --
+Aug 15 06:51:21 minikube kubelet[1885]: W0815 06:51:21.460245    1885 sysinfo.go:203] Nodes topology is not available, providing CPU topology
+Aug 15 06:51:21 minikube kubelet[1885]: W0815 06:51:21.461610    1885 machine.go:65] Cannot read vendor id correctly, set empty.
+Aug 15 06:56:21 minikube kubelet[1885]: W0815 06:56:21.459926    1885 sysinfo.go:203] Nodes topology is not available, providing CPU topology
+Aug 15 06:56:21 minikube kubelet[1885]: W0815 06:56:21.461404    1885 machine.go:65] Cannot read vendor id correctly, set empty.
+Aug 15 07:01:21 minikube kubelet[1885]: W0815 07:01:21.460947    1885 sysinfo.go:203] Nodes topology is not available, providing CPU topology
+Aug 15 07:01:21 minikube kubelet[1885]: W0815 07:01:21.462115    1885 machine.go:65] Cannot read vendor id correctly, set empty.
+Aug 15 07:06:21 minikube kubelet[1885]: W0815 07:06:21.456684    1885 sysinfo.go:203] Nodes topology is not available, providing CPU topology
+Aug 15 07:06:21 minikube kubelet[1885]: W0815 07:06:21.457327    1885 machine.go:65] Cannot read vendor id correctly, set empty.
+Aug 15 07:11:21 minikube kubelet[1885]: W0815 07:11:21.156007    1885 sysinfo.go:203] Nodes topology is not available, providing CPU topology
+Aug 15 07:11:21 minikube kubelet[1885]: W0815 07:11:21.157125    1885 machine.go:65] Cannot read vendor id correctly, set empty.
+Aug 15 07:13:41 minikube kubelet[1885]: I0815 07:13:41.299551    1885 topology_manager.go:200] "Topology Admit Handler"
+Aug 15 07:13:41 minikube kubelet[1885]: I0815 07:13:41.299816    1885 memory_manager.go:345] "RemoveStaleState removing state" podUID="cca4cf1a-e840-4c3e-91c7-300adc2e6ef0" containerName="mongodb"
+Aug 15 07:13:41 minikube kubelet[1885]: I0815 07:13:41.299942    1885 topology_manager.go:200] "Topology Admit Handler"
+Aug 15 07:13:41 minikube kubelet[1885]: I0815 07:13:41.299967    1885 memory_manager.go:345] "RemoveStaleState removing state" podUID="cca4cf1a-e840-4c3e-91c7-300adc2e6ef0" containerName="mongodb"
+Aug 15 07:13:41 minikube kubelet[1885]: I0815 07:13:41.313482    1885 topology_manager.go:200] "Topology Admit Handler"
+Aug 15 07:13:41 minikube kubelet[1885]: I0815 07:13:41.387272    1885 reconciler.go:270] "operationExecutor.VerifyControllerAttachedVolume started for volume \"kube-api-access-v8bbc\" (UniqueName: \"kubernetes.io/projected/75836dd4-a616-439a-a18c-8c64850e3f4a-kube-api-access-v8bbc\") pod \"ingress-nginx-admission-create-nhhzc\" (UID: \"75836dd4-a616-439a-a18c-8c64850e3f4a\") " pod="ingress-nginx/ingress-nginx-admission-create-nhhzc"
+Aug 15 07:13:41 minikube kubelet[1885]: I0815 07:13:41.387313    1885 reconciler.go:270] "operationExecutor.VerifyControllerAttachedVolume started for volume \"kube-api-access-cdrp5\" (UniqueName: \"kubernetes.io/projected/8ec5efb2-57e5-444d-978c-1665f7782579-kube-api-access-cdrp5\") pod \"ingress-nginx-controller-755dfbfc65-sfbsw\" (UID: \"8ec5efb2-57e5-444d-978c-1665f7782579\") " pod="ingress-nginx/ingress-nginx-controller-755dfbfc65-sfbsw"
+Aug 15 07:13:41 minikube kubelet[1885]: I0815 07:13:41.387337    1885 reconciler.go:270] "operationExecutor.VerifyControllerAttachedVolume started for volume \"webhook-cert\" (UniqueName: \"kubernetes.io/secret/8ec5efb2-57e5-444d-978c-1665f7782579-webhook-cert\") pod \"ingress-nginx-controller-755dfbfc65-sfbsw\" (UID: \"8ec5efb2-57e5-444d-978c-1665f7782579\") " pod="ingress-nginx/ingress-nginx-controller-755dfbfc65-sfbsw"
+Aug 15 07:13:41 minikube kubelet[1885]: I0815 07:13:41.387357    1885 reconciler.go:270] "operationExecutor.VerifyControllerAttachedVolume started for volume \"kube-api-access-5xnq9\" (UniqueName: \"kubernetes.io/projected/56aed86b-a320-402b-aa71-9ffc8d79b23f-kube-api-access-5xnq9\") pod \"ingress-nginx-admission-patch-gthjr\" (UID: \"56aed86b-a320-402b-aa71-9ffc8d79b23f\") " pod="ingress-nginx/ingress-nginx-admission-patch-gthjr"
+Aug 15 07:13:41 minikube kubelet[1885]: E0815 07:13:41.488315    1885 secret.go:188] Couldn't get secret ingress-nginx/ingress-nginx-admission: secret "ingress-nginx-admission" not found
+Aug 15 07:13:41 minikube kubelet[1885]: E0815 07:13:41.488404    1885 nestedpendingoperations.go:335] Operation for "{volumeName:kubernetes.io/secret/8ec5efb2-57e5-444d-978c-1665f7782579-webhook-cert podName:8ec5efb2-57e5-444d-978c-1665f7782579 nodeName:}" failed. No retries permitted until 2022-08-15 07:13:41.988380095 +0000 UTC m=+55340.963219681 (durationBeforeRetry 500ms). Error: MountVolume.SetUp failed for volume "webhook-cert" (UniqueName: "kubernetes.io/secret/8ec5efb2-57e5-444d-978c-1665f7782579-webhook-cert") pod "ingress-nginx-controller-755dfbfc65-sfbsw" (UID: "8ec5efb2-57e5-444d-978c-1665f7782579") : secret "ingress-nginx-admission" not found
+Aug 15 07:13:41 minikube kubelet[1885]: E0815 07:13:41.991889    1885 secret.go:188] Couldn't get secret ingress-nginx/ingress-nginx-admission: secret "ingress-nginx-admission" not found
+Aug 15 07:13:41 minikube kubelet[1885]: E0815 07:13:41.992007    1885 nestedpendingoperations.go:335] Operation for "{volumeName:kubernetes.io/secret/8ec5efb2-57e5-444d-978c-1665f7782579-webhook-cert podName:8ec5efb2-57e5-444d-978c-1665f7782579 nodeName:}" failed. No retries permitted until 2022-08-15 07:13:42.991985137 +0000 UTC m=+55341.966824807 (durationBeforeRetry 1s). Error: MountVolume.SetUp failed for volume "webhook-cert" (UniqueName: "kubernetes.io/secret/8ec5efb2-57e5-444d-978c-1665f7782579-webhook-cert") pod "ingress-nginx-controller-755dfbfc65-sfbsw" (UID: "8ec5efb2-57e5-444d-978c-1665f7782579") : secret "ingress-nginx-admission" not found
+Aug 15 07:13:42 minikube kubelet[1885]: E0815 07:13:42.999035    1885 secret.go:188] Couldn't get secret ingress-nginx/ingress-nginx-admission: secret "ingress-nginx-admission" not found
+Aug 15 07:13:42 minikube kubelet[1885]: E0815 07:13:42.999354    1885 nestedpendingoperations.go:335] Operation for "{volumeName:kubernetes.io/secret/8ec5efb2-57e5-444d-978c-1665f7782579-webhook-cert podName:8ec5efb2-57e5-444d-978c-1665f7782579 nodeName:}" failed. No retries permitted until 2022-08-15 07:13:44.999298263 +0000 UTC m=+55343.974137890 (durationBeforeRetry 2s). Error: MountVolume.SetUp failed for volume "webhook-cert" (UniqueName: "kubernetes.io/secret/8ec5efb2-57e5-444d-978c-1665f7782579-webhook-cert") pod "ingress-nginx-controller-755dfbfc65-sfbsw" (UID: "8ec5efb2-57e5-444d-978c-1665f7782579") : secret "ingress-nginx-admission" not found
+Aug 15 07:13:45 minikube kubelet[1885]: E0815 07:13:45.016738    1885 secret.go:188] Couldn't get secret ingress-nginx/ingress-nginx-admission: secret "ingress-nginx-admission" not found
+Aug 15 07:13:45 minikube kubelet[1885]: E0815 07:13:45.017006    1885 nestedpendingoperations.go:335] Operation for "{volumeName:kubernetes.io/secret/8ec5efb2-57e5-444d-978c-1665f7782579-webhook-cert podName:8ec5efb2-57e5-444d-978c-1665f7782579 nodeName:}" failed. No retries permitted until 2022-08-15 07:13:49.016963055 +0000 UTC m=+55347.991802725 (durationBeforeRetry 4s). Error: MountVolume.SetUp failed for volume "webhook-cert" (UniqueName: "kubernetes.io/secret/8ec5efb2-57e5-444d-978c-1665f7782579-webhook-cert") pod "ingress-nginx-controller-755dfbfc65-sfbsw" (UID: "8ec5efb2-57e5-444d-978c-1665f7782579") : secret "ingress-nginx-admission" not found
+Aug 15 07:13:49 minikube kubelet[1885]: E0815 07:13:49.043073    1885 secret.go:188] Couldn't get secret ingress-nginx/ingress-nginx-admission: secret "ingress-nginx-admission" not found
+Aug 15 07:13:49 minikube kubelet[1885]: E0815 07:13:49.043164    1885 nestedpendingoperations.go:335] Operation for "{volumeName:kubernetes.io/secret/8ec5efb2-57e5-444d-978c-1665f7782579-webhook-cert podName:8ec5efb2-57e5-444d-978c-1665f7782579 nodeName:}" failed. No retries permitted until 2022-08-15 07:13:57.043149001 +0000 UTC m=+55356.018552601 (durationBeforeRetry 8s). Error: MountVolume.SetUp failed for volume "webhook-cert" (UniqueName: "kubernetes.io/secret/8ec5efb2-57e5-444d-978c-1665f7782579-webhook-cert") pod "ingress-nginx-controller-755dfbfc65-sfbsw" (UID: "8ec5efb2-57e5-444d-978c-1665f7782579") : secret "ingress-nginx-admission" not found
+Aug 15 07:13:57 minikube kubelet[1885]: E0815 07:13:57.111018    1885 secret.go:188] Couldn't get secret ingress-nginx/ingress-nginx-admission: secret "ingress-nginx-admission" not found
+Aug 15 07:13:57 minikube kubelet[1885]: E0815 07:13:57.111657    1885 nestedpendingoperations.go:335] Operation for "{volumeName:kubernetes.io/secret/8ec5efb2-57e5-444d-978c-1665f7782579-webhook-cert podName:8ec5efb2-57e5-444d-978c-1665f7782579 nodeName:}" failed. No retries permitted until 2022-08-15 07:14:13.111619213 +0000 UTC m=+55372.087022813 (durationBeforeRetry 16s). Error: MountVolume.SetUp failed for volume "webhook-cert" (UniqueName: "kubernetes.io/secret/8ec5efb2-57e5-444d-978c-1665f7782579-webhook-cert") pod "ingress-nginx-controller-755dfbfc65-sfbsw" (UID: "8ec5efb2-57e5-444d-978c-1665f7782579") : secret "ingress-nginx-admission" not found
+Aug 15 07:14:13 minikube kubelet[1885]: E0815 07:14:13.188324    1885 secret.go:188] Couldn't get secret ingress-nginx/ingress-nginx-admission: secret "ingress-nginx-admission" not found
+Aug 15 07:14:13 minikube kubelet[1885]: E0815 07:14:13.188488    1885 nestedpendingoperations.go:335] Operation for "{volumeName:kubernetes.io/secret/8ec5efb2-57e5-444d-978c-1665f7782579-webhook-cert podName:8ec5efb2-57e5-444d-978c-1665f7782579 nodeName:}" failed. No retries permitted until 2022-08-15 07:14:45.188475929 +0000 UTC m=+55404.163879529 (durationBeforeRetry 32s). Error: MountVolume.SetUp failed for volume "webhook-cert" (UniqueName: "kubernetes.io/secret/8ec5efb2-57e5-444d-978c-1665f7782579-webhook-cert") pod "ingress-nginx-controller-755dfbfc65-sfbsw" (UID: "8ec5efb2-57e5-444d-978c-1665f7782579") : secret "ingress-nginx-admission" not found
+Aug 15 07:14:45 minikube kubelet[1885]: E0815 07:14:45.213369    1885 secret.go:188] Couldn't get secret ingress-nginx/ingress-nginx-admission: secret "ingress-nginx-admission" not found
+Aug 15 07:14:45 minikube kubelet[1885]: E0815 07:14:45.213440    1885 nestedpendingoperations.go:335] Operation for "{volumeName:kubernetes.io/secret/8ec5efb2-57e5-444d-978c-1665f7782579-webhook-cert podName:8ec5efb2-57e5-444d-978c-1665f7782579 nodeName:}" failed. No retries permitted until 2022-08-15 07:15:49.213427555 +0000 UTC m=+55468.189180335 (durationBeforeRetry 1m4s). Error: MountVolume.SetUp failed for volume "webhook-cert" (UniqueName: "kubernetes.io/secret/8ec5efb2-57e5-444d-978c-1665f7782579-webhook-cert") pod "ingress-nginx-controller-755dfbfc65-sfbsw" (UID: "8ec5efb2-57e5-444d-978c-1665f7782579") : secret "ingress-nginx-admission" not found
+Aug 15 07:15:11 minikube kubelet[1885]: I0815 07:15:11.160311    1885 reconciler.go:192] "operationExecutor.UnmountVolume started for volume \"kube-api-access-v8bbc\" (UniqueName: \"kubernetes.io/projected/75836dd4-a616-439a-a18c-8c64850e3f4a-kube-api-access-v8bbc\") pod \"75836dd4-a616-439a-a18c-8c64850e3f4a\" (UID: \"75836dd4-a616-439a-a18c-8c64850e3f4a\") "
+Aug 15 07:15:11 minikube kubelet[1885]: I0815 07:15:11.162038    1885 operation_generator.go:856] UnmountVolume.TearDown succeeded for volume "kubernetes.io/projected/75836dd4-a616-439a-a18c-8c64850e3f4a-kube-api-access-v8bbc" (OuterVolumeSpecName: "kube-api-access-v8bbc") pod "75836dd4-a616-439a-a18c-8c64850e3f4a" (UID: "75836dd4-a616-439a-a18c-8c64850e3f4a"). InnerVolumeSpecName "kube-api-access-v8bbc". PluginName "kubernetes.io/projected", VolumeGidValue ""
+Aug 15 07:15:11 minikube kubelet[1885]: I0815 07:15:11.261329    1885 reconciler.go:192] "operationExecutor.UnmountVolume started for volume \"kube-api-access-5xnq9\" (UniqueName: \"kubernetes.io/projected/56aed86b-a320-402b-aa71-9ffc8d79b23f-kube-api-access-5xnq9\") pod \"56aed86b-a320-402b-aa71-9ffc8d79b23f\" (UID: \"56aed86b-a320-402b-aa71-9ffc8d79b23f\") "
+Aug 15 07:15:11 minikube kubelet[1885]: I0815 07:15:11.261403    1885 reconciler.go:312] "Volume detached for volume \"kube-api-access-v8bbc\" (UniqueName: \"kubernetes.io/projected/75836dd4-a616-439a-a18c-8c64850e3f4a-kube-api-access-v8bbc\") on node \"minikube\" DevicePath \"\""
+Aug 15 07:15:11 minikube kubelet[1885]: I0815 07:15:11.262864    1885 operation_generator.go:856] UnmountVolume.TearDown succeeded for volume "kubernetes.io/projected/56aed86b-a320-402b-aa71-9ffc8d79b23f-kube-api-access-5xnq9" (OuterVolumeSpecName: "kube-api-access-5xnq9") pod "56aed86b-a320-402b-aa71-9ffc8d79b23f" (UID: "56aed86b-a320-402b-aa71-9ffc8d79b23f"). InnerVolumeSpecName "kube-api-access-5xnq9". PluginName "kubernetes.io/projected", VolumeGidValue ""
+Aug 15 07:15:11 minikube kubelet[1885]: I0815 07:15:11.361804    1885 reconciler.go:312] "Volume detached for volume \"kube-api-access-5xnq9\" (UniqueName: \"kubernetes.io/projected/56aed86b-a320-402b-aa71-9ffc8d79b23f-kube-api-access-5xnq9\") on node \"minikube\" DevicePath \"\""
+Aug 15 07:15:11 minikube kubelet[1885]: I0815 07:15:11.920084    1885 pod_container_deletor.go:79] "Container not found in pod's containers" containerID="4c44068f357c7b7605f1f3e6ddf3afe5ff1b6c4bdda6e34df8c1a01a20b29a63"
+Aug 15 07:15:11 minikube kubelet[1885]: I0815 07:15:11.926417    1885 pod_container_deletor.go:79] "Container not found in pod's containers" containerID="e628ae7fbf6feb19ffc9bfbaec4fd8b897a7472329167a42dc71bec8df0515b2"
+Aug 15 07:15:44 minikube kubelet[1885]: E0815 07:15:44.385734    1885 kubelet.go:1709] "Unable to attach or mount volumes for pod; skipping pod" err="unmounted volumes=[webhook-cert], unattached volumes=[webhook-cert kube-api-access-cdrp5]: timed out waiting for the condition" pod="ingress-nginx/ingress-nginx-controller-755dfbfc65-sfbsw"
+Aug 15 07:15:44 minikube kubelet[1885]: E0815 07:15:44.385758    1885 pod_workers.go:951] "Error syncing pod, skipping" err="unmounted volumes=[webhook-cert], unattached volumes=[webhook-cert kube-api-access-cdrp5]: timed out waiting for the condition" pod="ingress-nginx/ingress-nginx-controller-755dfbfc65-sfbsw" podUID=8ec5efb2-57e5-444d-978c-1665f7782579
+Aug 15 07:15:57 minikube kubelet[1885]: I0815 07:15:57.412102    1885 pod_container_deletor.go:79] "Container not found in pod's containers" containerID="407c0944d161adfc256e71d5f52bb6fc0a5b16d3d410dd741b438c8a77511d7b"
+Aug 15 07:16:21 minikube kubelet[1885]: W0815 07:16:21.152164    1885 sysinfo.go:203] Nodes topology is not available, providing CPU topology
+Aug 15 07:16:21 minikube kubelet[1885]: W0815 07:16:21.152658    1885 machine.go:65] Cannot read vendor id correctly, set empty.
+Aug 15 07:17:56 minikube kubelet[1885]: E0815 07:17:56.413237    1885 remote_image.go:218] "PullImage from image service failed" err="rpc error: code = Unknown desc = context deadline exceeded" image="k8s.gcr.io/ingress-nginx/controller:v1.2.1@sha256:5516d103a9c2ecc4f026efbd4b40662ce22dc1f824fb129ed121460aaa5c47f8"
+Aug 15 07:17:56 minikube kubelet[1885]: E0815 07:17:56.413364    1885 kuberuntime_image.go:51] "Failed to pull image" err="rpc error: code = Unknown desc = context deadline exceeded" image="k8s.gcr.io/ingress-nginx/controller:v1.2.1@sha256:5516d103a9c2ecc4f026efbd4b40662ce22dc1f824fb129ed121460aaa5c47f8"
+Aug 15 07:17:56 minikube kubelet[1885]: E0815 07:17:56.413874    1885 kuberuntime_manager.go:905] container &Container{Name:controller,Image:k8s.gcr.io/ingress-nginx/controller:v1.2.1@sha256:5516d103a9c2ecc4f026efbd4b40662ce22dc1f824fb129ed121460aaa5c47f8,Command:[],Args:[/nginx-ingress-controller --election-id=ingress-controller-leader --controller-class=k8s.io/ingress-nginx --watch-ingress-without-class=true --configmap=$(POD_NAMESPACE)/ingress-nginx-controller --tcp-services-configmap=$(POD_NAMESPACE)/tcp-services --udp-services-configmap=$(POD_NAMESPACE)/udp-services --validating-webhook=:8443 --validating-webhook-certificate=/usr/local/certificates/cert --validating-webhook-key=/usr/local/certificates/key],WorkingDir:,Ports:[]ContainerPort{ContainerPort{Name:http,HostPort:80,ContainerPort:80,Protocol:TCP,HostIP:,},ContainerPort{Name:https,HostPort:443,ContainerPort:443,Protocol:TCP,HostIP:,},ContainerPort{Name:webhook,HostPort:0,ContainerPort:8443,Protocol:TCP,HostIP:,},},Env:[]EnvVar{EnvVar{Name:POD_NAME,Value:,ValueFrom:&EnvVarSource{FieldRef:&ObjectFieldSelector{APIVersion:v1,FieldPath:metadata.name,},ResourceFieldRef:nil,ConfigMapKeyRef:nil,SecretKeyRef:nil,},},EnvVar{Name:POD_NAMESPACE,Value:,ValueFrom:&EnvVarSource{FieldRef:&ObjectFieldSelector{APIVersion:v1,FieldPath:metadata.namespace,},ResourceFieldRef:nil,ConfigMapKeyRef:nil,SecretKeyRef:nil,},},EnvVar{Name:LD_PRELOAD,Value:/usr/local/lib/libmimalloc.so,ValueFrom:nil,},},Resources:ResourceRequirements{Limits:ResourceList{},Requests:ResourceList{cpu: {{100 -3} {<nil>} 100m DecimalSI},memory: {{94371840 0} {<nil>} 90Mi BinarySI},},},VolumeMounts:[]VolumeMount{VolumeMount{Name:webhook-cert,ReadOnly:true,MountPath:/usr/local/certificates/,SubPath:,MountPropagation:nil,SubPathExpr:,},VolumeMount{Name:kube-api-access-cdrp5,ReadOnly:true,MountPath:/var/run/secrets/kubernetes.io/serviceaccount,SubPath:,MountPropagation:nil,SubPathExpr:,},},LivenessProbe:&Probe{ProbeHandler:ProbeHandler{Exec:nil,HTTPGet:&HTTPGetAction{Path:/healthz,Port:{0 10254 },Host:,Scheme:HTTP,HTTPHeaders:[]HTTPHeader{},},TCPSocket:nil,GRPC:nil,},InitialDelaySeconds:10,TimeoutSeconds:1,PeriodSeconds:10,SuccessThreshold:1,FailureThreshold:5,TerminationGracePeriodSeconds:nil,},ReadinessProbe:&Probe{ProbeHandler:ProbeHandler{Exec:nil,HTTPGet:&HTTPGetAction{Path:/healthz,Port:{0 10254 },Host:,Scheme:HTTP,HTTPHeaders:[]HTTPHeader{},},TCPSocket:nil,GRPC:nil,},InitialDelaySeconds:10,TimeoutSeconds:1,PeriodSeconds:10,SuccessThreshold:1,FailureThreshold:3,TerminationGracePeriodSeconds:nil,},Lifecycle:&Lifecycle{PostStart:nil,PreStop:&LifecycleHandler{Exec:&ExecAction{Command:[/wait-shutdown],},HTTPGet:nil,TCPSocket:nil,},},TerminationMessagePath:/dev/termination-log,ImagePullPolicy:IfNotPresent,SecurityContext:&SecurityContext{Capabilities:&Capabilities{Add:[NET_BIND_SERVICE],Drop:[ALL],},Privileged:nil,SELinuxOptions:nil,RunAsUser:*101,RunAsNonRoot:nil,ReadOnlyRootFilesystem:nil,AllowPrivilegeEscalation:*true,RunAsGroup:nil,ProcMount:nil,WindowsOptions:nil,SeccompProfile:nil,},Stdin:false,StdinOnce:false,TTY:false,EnvFrom:[]EnvFromSource{},TerminationMessagePolicy:File,VolumeDevices:[]VolumeDevice{},StartupProbe:nil,} start failed in pod ingress-nginx-controller-755dfbfc65-sfbsw_ingress-nginx(8ec5efb2-57e5-444d-978c-1665f7782579): ErrImagePull: rpc error: code = Unknown desc = context deadline exceeded
+Aug 15 07:17:56 minikube kubelet[1885]: E0815 07:17:56.413992    1885 pod_workers.go:951] "Error syncing pod, skipping" err="failed to \"StartContainer\" for \"controller\" with ErrImagePull: \"rpc error: code = Unknown desc = context deadline exceeded\"" pod="ingress-nginx/ingress-nginx-controller-755dfbfc65-sfbsw" podUID=8ec5efb2-57e5-444d-978c-1665f7782579
+Aug 15 07:17:56 minikube kubelet[1885]: E0815 07:17:56.494840    1885 pod_workers.go:951] "Error syncing pod, skipping" err="failed to \"StartContainer\" for \"controller\" with ImagePullBackOff: \"Back-off pulling image \\\"k8s.gcr.io/ingress-nginx/controller:v1.2.1@sha256:5516d103a9c2ecc4f026efbd4b40662ce22dc1f824fb129ed121460aaa5c47f8\\\"\"" pod="ingress-nginx/ingress-nginx-controller-755dfbfc65-sfbsw" podUID=8ec5efb2-57e5-444d-978c-1665f7782579
+Aug 15 07:20:10 minikube kubelet[1885]: E0815 07:20:10.184764    1885 remote_image.go:218] "PullImage from image service failed" err="rpc error: code = Unknown desc = context deadline exceeded" image="k8s.gcr.io/ingress-nginx/controller:v1.2.1@sha256:5516d103a9c2ecc4f026efbd4b40662ce22dc1f824fb129ed121460aaa5c47f8"
+Aug 15 07:20:10 minikube kubelet[1885]: E0815 07:20:10.184794    1885 kuberuntime_image.go:51] "Failed to pull image" err="rpc error: code = Unknown desc = context deadline exceeded" image="k8s.gcr.io/ingress-nginx/controller:v1.2.1@sha256:5516d103a9c2ecc4f026efbd4b40662ce22dc1f824fb129ed121460aaa5c47f8"
+Aug 15 07:20:10 minikube kubelet[1885]: E0815 07:20:10.184910    1885 kuberuntime_manager.go:905] container &Container{Name:controller,Image:k8s.gcr.io/ingress-nginx/controller:v1.2.1@sha256:5516d103a9c2ecc4f026efbd4b40662ce22dc1f824fb129ed121460aaa5c47f8,Command:[],Args:[/nginx-ingress-controller --election-id=ingress-controller-leader --controller-class=k8s.io/ingress-nginx --watch-ingress-without-class=true --configmap=$(POD_NAMESPACE)/ingress-nginx-controller --tcp-services-configmap=$(POD_NAMESPACE)/tcp-services --udp-services-configmap=$(POD_NAMESPACE)/udp-services --validating-webhook=:8443 --validating-webhook-certificate=/usr/local/certificates/cert --validating-webhook-key=/usr/local/certificates/key],WorkingDir:,Ports:[]ContainerPort{ContainerPort{Name:http,HostPort:80,ContainerPort:80,Protocol:TCP,HostIP:,},ContainerPort{Name:https,HostPort:443,ContainerPort:443,Protocol:TCP,HostIP:,},ContainerPort{Name:webhook,HostPort:0,ContainerPort:8443,Protocol:TCP,HostIP:,},},Env:[]EnvVar{EnvVar{Name:POD_NAME,Value:,ValueFrom:&EnvVarSource{FieldRef:&ObjectFieldSelector{APIVersion:v1,FieldPath:metadata.name,},ResourceFieldRef:nil,ConfigMapKeyRef:nil,SecretKeyRef:nil,},},EnvVar{Name:POD_NAMESPACE,Value:,ValueFrom:&EnvVarSource{FieldRef:&ObjectFieldSelector{APIVersion:v1,FieldPath:metadata.namespace,},ResourceFieldRef:nil,ConfigMapKeyRef:nil,SecretKeyRef:nil,},},EnvVar{Name:LD_PRELOAD,Value:/usr/local/lib/libmimalloc.so,ValueFrom:nil,},},Resources:ResourceRequirements{Limits:ResourceList{},Requests:ResourceList{cpu: {{100 -3} {<nil>} 100m DecimalSI},memory: {{94371840 0} {<nil>} 90Mi BinarySI},},},VolumeMounts:[]VolumeMount{VolumeMount{Name:webhook-cert,ReadOnly:true,MountPath:/usr/local/certificates/,SubPath:,MountPropagation:nil,SubPathExpr:,},VolumeMount{Name:kube-api-access-cdrp5,ReadOnly:true,MountPath:/var/run/secrets/kubernetes.io/serviceaccount,SubPath:,MountPropagation:nil,SubPathExpr:,},},LivenessProbe:&Probe{ProbeHandler:ProbeHandler{Exec:nil,HTTPGet:&HTTPGetAction{Path:/healthz,Port:{0 10254 },Host:,Scheme:HTTP,HTTPHeaders:[]HTTPHeader{},},TCPSocket:nil,GRPC:nil,},InitialDelaySeconds:10,TimeoutSeconds:1,PeriodSeconds:10,SuccessThreshold:1,FailureThreshold:5,TerminationGracePeriodSeconds:nil,},ReadinessProbe:&Probe{ProbeHandler:ProbeHandler{Exec:nil,HTTPGet:&HTTPGetAction{Path:/healthz,Port:{0 10254 },Host:,Scheme:HTTP,HTTPHeaders:[]HTTPHeader{},},TCPSocket:nil,GRPC:nil,},InitialDelaySeconds:10,TimeoutSeconds:1,PeriodSeconds:10,SuccessThreshold:1,FailureThreshold:3,TerminationGracePeriodSeconds:nil,},Lifecycle:&Lifecycle{PostStart:nil,PreStop:&LifecycleHandler{Exec:&ExecAction{Command:[/wait-shutdown],},HTTPGet:nil,TCPSocket:nil,},},TerminationMessagePath:/dev/termination-log,ImagePullPolicy:IfNotPresent,SecurityContext:&SecurityContext{Capabilities:&Capabilities{Add:[NET_BIND_SERVICE],Drop:[ALL],},Privileged:nil,SELinuxOptions:nil,RunAsUser:*101,RunAsNonRoot:nil,ReadOnlyRootFilesystem:nil,AllowPrivilegeEscalation:*true,RunAsGroup:nil,ProcMount:nil,WindowsOptions:nil,SeccompProfile:nil,},Stdin:false,StdinOnce:false,TTY:false,EnvFrom:[]EnvFromSource{},TerminationMessagePolicy:File,VolumeDevices:[]VolumeDevice{},StartupProbe:nil,} start failed in pod ingress-nginx-controller-755dfbfc65-sfbsw_ingress-nginx(8ec5efb2-57e5-444d-978c-1665f7782579): ErrImagePull: rpc error: code = Unknown desc = context deadline exceeded
+Aug 15 07:20:10 minikube kubelet[1885]: E0815 07:20:10.184941    1885 pod_workers.go:951] "Error syncing pod, skipping" err="failed to \"StartContainer\" for \"controller\" with ErrImagePull: \"rpc error: code = Unknown desc = context deadline exceeded\"" pod="ingress-nginx/ingress-nginx-controller-755dfbfc65-sfbsw" podUID=8ec5efb2-57e5-444d-978c-1665f7782579
+Aug 15 07:20:25 minikube kubelet[1885]: E0815 07:20:25.188605    1885 pod_workers.go:951] "Error syncing pod, skipping" err="failed to \"StartContainer\" for \"controller\" with ImagePullBackOff: \"Back-off pulling image \\\"k8s.gcr.io/ingress-nginx/controller:v1.2.1@sha256:5516d103a9c2ecc4f026efbd4b40662ce22dc1f824fb129ed121460aaa5c47f8\\\"\"" pod="ingress-nginx/ingress-nginx-controller-755dfbfc65-sfbsw" podUID=8ec5efb2-57e5-444d-978c-1665f7782579
+Aug 15 07:21:21 minikube kubelet[1885]: W0815 07:21:21.143397    1885 sysinfo.go:203] Nodes topology is not available, providing CPU topology
+Aug 15 07:21:21 minikube kubelet[1885]: W0815 07:21:21.143752    1885 machine.go:65] Cannot read vendor id correctly, set empty.
+
+* 
+* ==> storage-provisioner [737f65d066c9] <==
+* I0811 23:19:22.018808       1 storage_provisioner.go:116] Initializing the minikube storage provisioner...
+I0811 23:19:22.025992       1 storage_provisioner.go:141] Storage provisioner initialized, now starting service!
+I0811 23:19:22.026026       1 leaderelection.go:243] attempting to acquire leader lease kube-system/k8s.io-minikube-hostpath...
+I0811 23:19:22.038910       1 leaderelection.go:253] successfully acquired lease kube-system/k8s.io-minikube-hostpath
+I0811 23:19:22.038994       1 controller.go:835] Starting provisioner controller k8s.io/minikube-hostpath_minikube_cbff9672-b35c-4e93-b71a-e3bb0f84f727!
+I0811 23:19:22.039063       1 event.go:282] Event(v1.ObjectReference{Kind:"Endpoints", Namespace:"kube-system", Name:"k8s.io-minikube-hostpath", UID:"5f357f30-379c-4461-91b8-c409e9f9da1a", APIVersion:"v1", ResourceVersion:"383", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' minikube_cbff9672-b35c-4e93-b71a-e3bb0f84f727 became leader
+I0811 23:19:22.141299       1 controller.go:884] Started provisioner controller k8s.io/minikube-hostpath_minikube_cbff9672-b35c-4e93-b71a-e3bb0f84f727!
+
+* 
+* ==> storage-provisioner [a266fbb0709c] <==
+* I0811 23:18:51.185582       1 storage_provisioner.go:116] Initializing the minikube storage provisioner...
+F0811 23:19:21.187992       1 main.go:39] error getting server version: Get "https://10.96.0.1:443/version?timeout=32s": dial tcp 10.96.0.1:443: i/o timeout
+
